@@ -1,0 +1,3 @@
+[submodule "Arduino-Eagle-Cad-Library"]
+	path = board/Arduino-Eagle-Cad-Library
+	url = https://github.com/shenkarSElab/Arduino-Eagle-Cad-Library.git
