@@ -1215,10 +1215,10 @@ GND
 RAW</text>
 <text x="-2.54" y="-30.48" size="1.778" layer="91">http://christianto.tjahyadi.com/wp-content/uploads/2014/11/nano.jpg</text>
 <text x="48.26" y="71.12" size="1.778" layer="98">NANO</text>
-<text x="96.52" y="66.04" size="1.778" layer="98">NRF24</text>
+<text x="115.57" y="49.53" size="1.778" layer="98">NRF24</text>
 </plain>
 <instances>
-<instance part="U$2" gate="G$1" x="104.14" y="59.69" rot="R90"/>
+<instance part="U$2" gate="G$1" x="116.84" y="44.45" rot="R90"/>
 <instance part="Q1" gate="G$1" x="35.56" y="-10.16"/>
 <instance part="D1" gate="D" x="38.1" y="0" rot="R90"/>
 <instance part="U$3" gate="1" x="38.1" y="-20.32"/>
@@ -1234,8 +1234,8 @@ RAW</text>
 </instance>
 <instance part="R2" gate="G$1" x="78.74" y="-12.7"/>
 <instance part="U$5" gate="1" x="27.94" y="27.94"/>
-<instance part="SJ1" gate="G$1" x="7.62" y="53.34" smashed="yes">
-<attribute name="NAME" x="10.16" y="53.721" size="1.778" layer="95"/>
+<instance part="SJ1" gate="G$1" x="106.68" y="58.42" smashed="yes" rot="R90">
+<attribute name="NAME" x="109.22" y="61.849" size="1.778" layer="95" rot="R180"/>
 </instance>
 <instance part="LM317" gate="1" x="149.86" y="5.08" smashed="yes">
 <attribute name="NAME" x="143.002" y="8.382" size="1.778" layer="95"/>
@@ -1293,7 +1293,7 @@ RAW</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="GND"/>
-<wire x1="91.44" y1="62.23" x2="91.44" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="46.99" x2="104.14" y2="49.53" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -1338,6 +1338,11 @@ RAW</text>
 <pinref part="JP1" gate="G$1" pin="15"/>
 <wire x1="43.18" y1="30.48" x2="33.02" y2="30.48" width="0.1524" layer="91"/>
 <label x="33.02" y="27.94" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SJ1" gate="G$1" pin="1"/>
+<wire x1="101.6" y1="58.42" x2="99.06" y2="58.42" width="0.1524" layer="91"/>
+<label x="93.98" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -1421,13 +1426,19 @@ RAW</text>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="VCC"/>
-<wire x1="93.98" y1="62.23" x2="93.98" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="46.99" x2="106.68" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="SJ1" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="SJ1" gate="G$1" pin="3"/>
+<wire x1="111.76" y1="58.42" x2="114.3" y2="58.42" width="0.1524" layer="91"/>
+<label x="114.3" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MISO" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="MISO"/>
-<wire x1="91.44" y1="54.61" x2="90.17" y2="54.61" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="39.37" x2="102.87" y2="39.37" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="1"/>
@@ -1438,7 +1449,7 @@ RAW</text>
 <net name="SCK" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="SCK"/>
-<wire x1="91.44" y1="57.15" x2="90.17" y2="57.15" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="41.91" x2="102.87" y2="41.91" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="1"/>
@@ -1449,7 +1460,7 @@ RAW</text>
 <net name="CE" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="CE"/>
-<wire x1="91.44" y1="59.69" x2="90.17" y2="59.69" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="44.45" x2="102.87" y2="44.45" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="3"/>
@@ -1460,7 +1471,7 @@ RAW</text>
 <net name="CSN" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="CSN"/>
-<wire x1="93.98" y1="59.69" x2="95.25" y2="59.69" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="44.45" x2="107.95" y2="44.45" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="4"/>
@@ -1471,7 +1482,7 @@ RAW</text>
 <net name="MOSI" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="MOSI"/>
-<wire x1="93.98" y1="57.15" x2="95.25" y2="57.15" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="41.91" x2="107.95" y2="41.91" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="2"/>
@@ -1482,7 +1493,7 @@ RAW</text>
 <net name="IRQ" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="IRQ"/>
-<wire x1="93.98" y1="54.61" x2="95.25" y2="54.61" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="39.37" x2="107.95" y2="39.37" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D3" class="0">
