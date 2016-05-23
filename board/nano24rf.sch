@@ -150,96 +150,6 @@
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
-<library name="Arduino-clone">
-<description>Arduino Clone pinheaders
-By cl@xganon.com
-http://www.xganon.com</description>
-<packages>
-<package name="NRF24-2X4">
-<pad name="GND" x="-1.27" y="2.54" drill="0.8" shape="square"/>
-<pad name="CE" x="-3.81" y="2.54" drill="0.8"/>
-<pad name="SCK" x="-6.35" y="2.54" drill="0.8"/>
-<pad name="MISO" x="-8.89" y="2.54" drill="0.8"/>
-<pad name="IRQ" x="-8.89" y="0" drill="0.8"/>
-<pad name="MOSI" x="-6.35" y="0" drill="0.8"/>
-<pad name="CSN" x="-3.81" y="0" drill="0.8"/>
-<pad name="VCC" x="-1.27" y="0" drill="0.8"/>
-</package>
-</packages>
-<symbols>
-<symbol name="NRF24-2X4">
-<wire x1="-10.16" y1="13.97" x2="1.27" y2="13.97" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="13.97" x2="3.81" y2="13.97" width="0.4064" layer="94"/>
-<wire x1="3.81" y1="13.97" x2="3.81" y2="11.43" width="0.4064" layer="94"/>
-<wire x1="3.81" y1="11.43" x2="3.81" y2="-7.62" width="0.4064" layer="94"/>
-<wire x1="3.81" y1="-7.62" x2="-10.16" y2="-7.62" width="0.4064" layer="94"/>
-<wire x1="-10.16" y1="-7.62" x2="-10.16" y2="-0.254" width="0.4064" layer="94"/>
-<wire x1="-10.16" y1="-0.254" x2="-10.16" y2="7.366" width="0.4064" layer="94"/>
-<wire x1="-10.16" y1="7.366" x2="-10.16" y2="13.97" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="13.97" x2="1.27" y2="11.43" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="7.366" x2="-6.096" y2="7.62" width="0.254" layer="94" curve="-180"/>
-<wire x1="-6.096" y1="0" x2="-10.16" y2="-0.254" width="0.254" layer="94" curve="-180"/>
-<wire x1="-6.096" y1="0" x2="-6.096" y2="7.62" width="0.254" layer="94"/>
-<wire x1="0" y1="-1.27" x2="0" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="0" y2="-6.858" width="0.254" layer="94"/>
-<wire x1="0" y1="-6.858" x2="-1.27" y2="-6.858" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="-6.858" x2="-1.27" y2="-3.81" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="-3.81" x2="-2.54" y2="-3.81" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-3.81" x2="-2.54" y2="-6.858" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-6.858" x2="-3.81" y2="-6.858" width="0.254" layer="94"/>
-<wire x1="-3.81" y1="-6.858" x2="-3.81" y2="-3.81" width="0.254" layer="94"/>
-<wire x1="-3.81" y1="-3.81" x2="-5.08" y2="-3.81" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-3.81" x2="-5.08" y2="-6.858" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-6.858" x2="-6.35" y2="-6.858" width="0.254" layer="94"/>
-<wire x1="-6.35" y1="-6.858" x2="-6.35" y2="-3.81" width="0.254" layer="94"/>
-<wire x1="-6.35" y1="-3.81" x2="-7.62" y2="-3.81" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-3.81" x2="-7.62" y2="-6.858" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-6.858" x2="-9.398" y2="-6.858" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
-<pin name="VCC" x="2.54" y="10.16" visible="pin" length="point" rot="R270"/>
-<pin name="CSN" x="0" y="10.16" visible="pin" length="point" rot="R270"/>
-<pin name="MOSI" x="-2.54" y="10.16" visible="pin" length="point" rot="R270"/>
-<pin name="IRQ" x="-5.08" y="10.16" visible="pin" length="point" rot="R270"/>
-<pin name="MISO" x="-5.08" y="12.7" visible="pin" length="point" rot="R90"/>
-<pin name="SCK" x="-2.54" y="12.7" visible="pin" length="point" rot="R90"/>
-<pin name="CE" x="0" y="12.7" visible="pin" length="point" rot="R90"/>
-<pin name="GND" x="2.54" y="12.7" visible="pin" length="point" rot="R90"/>
-<wire x1="1.27" y1="11.43" x2="3.81" y2="11.43" width="0.254" layer="94"/>
-<circle x="-5.08" y="12.7" radius="0.915809375" width="0.254" layer="94"/>
-<circle x="-2.54" y="12.7" radius="0.915809375" width="0.254" layer="94"/>
-<circle x="0" y="12.7" radius="0.915809375" width="0.254" layer="94"/>
-<circle x="0" y="10.16" radius="0.915809375" width="0.254" layer="94"/>
-<circle x="2.54" y="10.16" radius="0.915809375" width="0.254" layer="94"/>
-<circle x="-2.54" y="10.16" radius="0.915809375" width="0.254" layer="94"/>
-<circle x="-5.08" y="10.16" radius="0.915809375" width="0.254" layer="94"/>
-<circle x="2.54" y="12.7" radius="0.915809375" width="0.254" layer="94"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="NRF24">
-<gates>
-<gate name="G$1" symbol="NRF24-2X4" x="-5.08" y="10.16"/>
-</gates>
-<devices>
-<device name="" package="NRF24-2X4">
-<connects>
-<connect gate="G$1" pin="CE" pad="CE"/>
-<connect gate="G$1" pin="CSN" pad="CSN"/>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="IRQ" pad="IRQ"/>
-<connect gate="G$1" pin="MISO" pad="MISO"/>
-<connect gate="G$1" pin="MOSI" pad="MOSI"/>
-<connect gate="G$1" pin="SCK" pad="SCK"/>
-<connect gate="G$1" pin="VCC" pad="VCC"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="adafruit">
 <packages>
 <package name="SOT23-W">
@@ -498,6 +408,16 @@ by exp-lbrs.ulp</description>
 <text x="-0.9525" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-0.9525" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
 </package>
+<package name="NRF24-2X4">
+<pad name="CE" x="-3.81" y="2.54" drill="0.8"/>
+<pad name="CSN" x="-3.81" y="0" drill="0.8"/>
+<pad name="GND" x="-1.27" y="2.54" drill="0.8" shape="square"/>
+<pad name="IRQ" x="-8.89" y="0" drill="0.8"/>
+<pad name="MISO" x="-8.89" y="2.54" drill="0.8"/>
+<pad name="MOSI" x="-6.35" y="0" drill="0.8"/>
+<pad name="SCK" x="-6.35" y="2.54" drill="0.8"/>
+<pad name="VCC" x="-1.27" y="0" drill="0.8"/>
+</package>
 </packages>
 <symbols>
 <symbol name="GND">
@@ -582,6 +502,53 @@ by exp-lbrs.ulp</description>
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
 <text x="-2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="NRF24-2X4">
+<circle x="-5.08" y="12.7" radius="0.915809375" width="0.254" layer="94"/>
+<circle x="-2.54" y="12.7" radius="0.915809375" width="0.254" layer="94"/>
+<circle x="0" y="12.7" radius="0.915809375" width="0.254" layer="94"/>
+<circle x="0" y="10.16" radius="0.915809375" width="0.254" layer="94"/>
+<circle x="2.54" y="10.16" radius="0.915809375" width="0.254" layer="94"/>
+<circle x="-2.54" y="10.16" radius="0.915809375" width="0.254" layer="94"/>
+<circle x="-5.08" y="10.16" radius="0.915809375" width="0.254" layer="94"/>
+<circle x="2.54" y="12.7" radius="0.915809375" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="13.97" x2="1.27" y2="13.97" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="13.97" x2="3.81" y2="13.97" width="0.4064" layer="94"/>
+<wire x1="3.81" y1="13.97" x2="3.81" y2="11.43" width="0.4064" layer="94"/>
+<wire x1="3.81" y1="11.43" x2="3.81" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="3.81" y1="-7.62" x2="-10.16" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="-10.16" y2="-0.254" width="0.4064" layer="94"/>
+<wire x1="-10.16" y1="-0.254" x2="-10.16" y2="7.366" width="0.4064" layer="94"/>
+<wire x1="-10.16" y1="7.366" x2="-10.16" y2="13.97" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="13.97" x2="1.27" y2="11.43" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="7.366" x2="-6.096" y2="7.62" width="0.254" layer="94" curve="-180"/>
+<wire x1="-6.096" y1="0" x2="-10.16" y2="-0.254" width="0.254" layer="94" curve="-180"/>
+<wire x1="-6.096" y1="0" x2="-6.096" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-6.858" width="0.254" layer="94"/>
+<wire x1="0" y1="-6.858" x2="-1.27" y2="-6.858" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-6.858" x2="-1.27" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-3.81" x2="-2.54" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-3.81" x2="-2.54" y2="-6.858" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-6.858" x2="-3.81" y2="-6.858" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="-6.858" x2="-3.81" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="-3.81" x2="-5.08" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-3.81" x2="-5.08" y2="-6.858" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-6.858" x2="-6.35" y2="-6.858" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="-6.858" x2="-6.35" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="-3.81" x2="-7.62" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-3.81" x2="-7.62" y2="-6.858" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-6.858" x2="-9.398" y2="-6.858" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="11.43" x2="3.81" y2="11.43" width="0.254" layer="94"/>
+<pin name="CE" x="0" y="12.7" visible="pin" length="point" rot="R90"/>
+<pin name="CSN" x="0" y="10.16" visible="pin" length="point" rot="R270"/>
+<pin name="GND" x="2.54" y="12.7" visible="pin" length="point" rot="R90"/>
+<pin name="IRQ" x="-5.08" y="10.16" visible="pin" length="point" rot="R270"/>
+<pin name="MISO" x="-5.08" y="12.7" visible="pin" length="point" rot="R90"/>
+<pin name="MOSI" x="-2.54" y="10.16" visible="pin" length="point" rot="R270"/>
+<pin name="SCK" x="-2.54" y="12.7" visible="pin" length="point" rot="R90"/>
+<pin name="VCC" x="2.54" y="10.16" visible="pin" length="point" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -715,6 +682,28 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="NRF24">
+<gates>
+<gate name="G$1" symbol="NRF24-2X4" x="-5.08" y="10.16"/>
+</gates>
+<devices>
+<device name="" package="NRF24-2X4">
+<connects>
+<connect gate="G$1" pin="CE" pad="CE"/>
+<connect gate="G$1" pin="CSN" pad="CSN"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="IRQ" pad="IRQ"/>
+<connect gate="G$1" pin="MISO" pad="MISO"/>
+<connect gate="G$1" pin="MOSI" pad="MOSI"/>
+<connect gate="G$1" pin="SCK" pad="SCK"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1167,7 +1156,7 @@ http://dangerousprototypes.com</description>
 </class>
 </classes>
 <parts>
-<part name="U$2" library="Arduino-clone" deviceset="NRF24" device=""/>
+<part name="U$2" library="ATTAMI-V0.00" deviceset="NRF24" device=""/>
 <part name="Q1" library="adafruit" deviceset="MOSFET-N" device="WAVE"/>
 <part name="D1" library="dp_devices" deviceset="DIODE" device="-DO-214AC"/>
 <part name="U$3" library="ATTAMI-V0.00" deviceset="GND" device=""/>
@@ -1330,7 +1319,7 @@ RAW</text>
 </segment>
 <segment>
 <pinref part="D2" gate="D" pin="C"/>
-<wire x1="91.44" y1="2.54" x2="91.44" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="2.54" x2="91.44" y2="10.16" width="0.1524" layer="91"/>
 <label x="91.44" y="5.08" size="1.778" layer="95"/>
 <pinref part="FET2" gate="G$1" pin="1"/>
 <wire x1="91.44" y1="2.54" x2="104.14" y2="2.54" width="0.1524" layer="91"/>
@@ -1396,7 +1385,7 @@ RAW</text>
 <label x="73.66" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="VCC" class="0">
+<net name="VOUT" class="0">
 <segment>
 <pinref part="LM317" gate="1" pin="OUT"/>
 <pinref part="C2" gate="G$1" pin="1"/>
