@@ -155,8 +155,8 @@
 <wire x1="17.76" y1="40.31" x2="0" y2="40.31" width="0" layer="20"/>
 <wire x1="0" y1="40.31" x2="0" y2="0" width="0" layer="20"/>
 <text x="4.445" y="30.48" size="1.27" layer="21" font="vector">SEshenkar</text>
-<text x="5.715" y="37.973" size="1.27" layer="21" font="vector">nano24RF</text>
-<text x="10.795" y="36.703" size="0.8128" layer="21" font="vector">v1</text>
+<text x="4.445" y="37.973" size="1.27" layer="21" font="vector">nano24RF</text>
+<text x="10.16" y="36.703" size="0.8128" layer="21" font="vector">v1</text>
 <wire x1="6.477" y1="0.889" x2="6.985" y2="0.889" width="0.254" layer="21"/>
 <wire x1="7.493" y1="0.889" x2="6.985" y2="0.889" width="0.254" layer="21"/>
 <wire x1="6.985" y1="0.889" x2="6.985" y2="1.397" width="0.254" layer="21"/>
@@ -348,6 +348,26 @@ by exp-lbrs.ulp</description>
 <rectangle x1="14.986" y1="-0.254" x2="15.494" y2="0.254" layer="51"/>
 <pad name="15" x="17.78" y="0" drill="1" diameter="1.6764" rot="R90"/>
 <rectangle x1="17.526" y1="-0.254" x2="18.034" y2="0.254" layer="51"/>
+</package>
+<package name="SOLDERJUMPER_REFLOW">
+<description>&lt;b&gt;Solder Jumper&lt;/b&gt; - Reflow</description>
+<wire x1="1.397" y1="-1.016" x2="-1.397" y2="-1.016" width="0.2032" layer="21"/>
+<wire x1="1.397" y1="1.016" x2="1.651" y2="0.762" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-1.651" y1="0.762" x2="-1.397" y2="1.016" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-1.651" y1="-0.762" x2="-1.397" y2="-1.016" width="0.2032" layer="21" curve="90"/>
+<wire x1="1.397" y1="-1.016" x2="1.651" y2="-0.762" width="0.2032" layer="21" curve="90"/>
+<wire x1="1.651" y1="-0.762" x2="1.651" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="-1.651" y1="-0.762" x2="-1.651" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="-1.397" y1="1.016" x2="1.397" y2="1.016" width="0.2032" layer="21"/>
+<wire x1="1.016" y1="0" x2="1.524" y2="0" width="0.2032" layer="51"/>
+<wire x1="-1.016" y1="0" x2="-1.524" y2="0" width="0.2032" layer="51"/>
+<wire x1="-0.254" y1="-0.127" x2="-0.254" y2="0.127" width="1.27" layer="51" curve="-180" cap="flat"/>
+<wire x1="0.254" y1="0.127" x2="0.254" y2="-0.127" width="1.27" layer="51" curve="-180" cap="flat"/>
+<smd name="1" x="-0.762" y="0" dx="1.1684" dy="1.6002" layer="1"/>
+<smd name="2" x="0.762" y="0" dx="1.1684" dy="1.6002" layer="1"/>
+<text x="-1.651" y="1.27" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
+<text x="0.4001" y="0" size="0.02" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.0762" y1="-0.9144" x2="0.0762" y2="0.9144" layer="29"/>
 </package>
 </packages>
 </library>
@@ -607,10 +627,7 @@ design rules under a new name.
 <element name="JP2" library="microbuilder" package="1X15_ROUND_70" value="" x="16.51" y="20.32" smashed="yes" rot="R270">
 <attribute name="VALUE" x="13.335" y="39.37" size="0.4064" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="SJ4" library="ATTAMI-V0.00" package="PAD-JUMPER-3-2OF3_NC_BY_TRACE_YES_SILK_LARGE" value="JUMPER-PAD-3-2OF3_NC_BY_TRACE_LARGE" x="8.255" y="10.795" smashed="yes" rot="R180">
-<attribute name="NAME" x="10.922" y="12.065" size="1.016" layer="25" font="vector" ratio="10" rot="R270"/>
-<attribute name="VALUE" x="8.3551" y="10.795" size="0.02" layer="27" rot="R180"/>
-</element>
+<element name="SJ2" library="microbuilder" package="SOLDERJUMPER_REFLOW" value="" x="5.08" y="-1.905"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -659,15 +676,12 @@ design rules under a new name.
 <contactref element="C1" pad="1"/>
 <contactref element="JP1" pad="15"/>
 <contactref element="SJ1" pad="1"/>
-<contactref element="SJ4" pad="3"/>
 <wire x1="8.255" y1="28.702" x2="8.255" y2="28.31" width="0.4064" layer="1"/>
 <wire x1="8.255" y1="28.31" x2="9.895" y2="26.67" width="0.4064" layer="1"/>
 <wire x1="9.895" y1="26.67" x2="8.505" y2="26.67" width="0.4064" layer="1"/>
 <wire x1="8.505" y1="26.67" x2="8.1" y2="26.265" width="0.4064" layer="1"/>
 <wire x1="1.27" y1="2.54" x2="5.715" y2="8.89" width="1.016" layer="16"/>
 <via x="5.715" y="8.89" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="5.715" y1="8.89" x2="6.731" y2="10.795" width="1.016" layer="1" curve="13.839067"/>
-<wire x1="6.731" y1="10.795" x2="8.001" y2="13.081" width="0.6096" layer="1" curve="-15.803299"/>
 <via x="8.001" y="13.081" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="8.001" y1="13.081" x2="8.001" y2="15.113" width="0.6096" layer="16" curve="73.912494"/>
 <wire x1="8.001" y1="15.113" x2="5.969" y2="21.209" width="0.6096" layer="16" curve="-37.042594"/>
@@ -675,6 +689,9 @@ design rules under a new name.
 <via x="11.049" y="28.956" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="11.049" y1="28.956" x2="11.049" y2="27.824" width="0.6096" layer="1"/>
 <wire x1="11.049" y1="27.824" x2="9.895" y2="26.67" width="0.6096" layer="1"/>
+<contactref element="SJ2" pad="1"/>
+<wire x1="5.715" y1="8.89" x2="8.001" y2="13.081" width="0" layer="19" extent="1-1"/>
+<wire x1="4.318" y1="-1.905" x2="1.27" y2="2.54" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="Q1" pad="1"/>
@@ -709,7 +726,6 @@ design rules under a new name.
 <contactref element="LM317" pad="VOUT@2"/>
 <contactref element="C2" pad="1"/>
 <contactref element="R4" pad="1"/>
-<contactref element="SJ4" pad="1"/>
 <wire x1="5.3" y1="24.765" x2="8.1" y2="24.765" width="0.4064" layer="1"/>
 <wire x1="8.1" y1="24.765" x2="10.16" y2="25.03" width="0.4064" layer="1"/>
 <via x="8.89" y="17.78" extent="1-16" drill="0.6" shape="square"/>
@@ -721,7 +737,16 @@ design rules under a new name.
 <wire x1="12.7" y1="23.23" x2="13.208" y2="22.479" width="0.6096" layer="1" curve="-81.898516"/>
 <wire x1="13.208" y1="22.479" x2="13.208" y2="21.336" width="0.6096" layer="1" curve="13.746918"/>
 <wire x1="8.89" y1="17.78" x2="9.525" y2="13.081" width="0.6096" layer="1"/>
-<wire x1="9.525" y1="13.081" x2="9.779" y2="10.795" width="0.6096" layer="1" curve="-2.71172"/>
+<contactref element="D2" pad="1"/>
+<contactref element="FET2" pad="1"/>
+<wire x1="10.085" y1="6.35" x2="10.795" y2="2.54" width="1.016" layer="1"/>
+<contactref element="FET1" pad="1"/>
+<contactref element="D1" pad="1"/>
+<contactref element="SJ2" pad="2"/>
+<wire x1="10.085" y1="6.35" x2="9.525" y2="13.081" width="0" layer="19" extent="1-1"/>
+<wire x1="7.695" y1="6.35" x2="10.085" y2="6.35" width="0" layer="19" extent="1-1"/>
+<wire x1="6.985" y1="2.54" x2="10.795" y2="2.54" width="0" layer="19" extent="1-1"/>
+<wire x1="5.842" y1="-1.905" x2="6.985" y2="2.54" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$7">
 <contactref element="LM317" pad="GND"/>
@@ -789,17 +814,6 @@ design rules under a new name.
 <wire x1="5.588" y1="11.684" x2="12.573" y2="11.557" width="0.4064" layer="16" curve="-40.963312"/>
 <wire x1="12.573" y1="11.557" x2="15.24" y2="8.509" width="0.4064" layer="16" curve="-54.581618"/>
 <wire x1="15.24" y1="8.509" x2="16.51" y2="7.62" width="0.4064" layer="16" curve="82.225714"/>
-</signal>
-<signal name="N$6">
-<contactref element="FET1" pad="1"/>
-<contactref element="D1" pad="1"/>
-<contactref element="SJ4" pad="2"/>
-<contactref element="D2" pad="1"/>
-<contactref element="FET2" pad="1"/>
-<wire x1="8.255" y1="10.795" x2="7.695" y2="6.35" width="1.016" layer="1"/>
-<wire x1="7.695" y1="6.35" x2="10.085" y2="6.35" width="1.016" layer="1"/>
-<wire x1="10.085" y1="6.35" x2="10.795" y2="2.54" width="1.016" layer="1"/>
-<wire x1="10.795" y1="2.54" x2="6.985" y2="2.54" width="1.016" layer="1"/>
 </signal>
 </signals>
 </board>
