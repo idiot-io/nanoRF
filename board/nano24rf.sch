@@ -1311,6 +1311,16 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 </net>
 </nets>
 </sheet>
+<sheet>
+<plain>
+</plain>
+<instances>
+</instances>
+<busses>
+</busses>
+<nets>
+</nets>
+</sheet>
 </sheets>
 </schematic>
 </drawing>
