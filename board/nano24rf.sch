@@ -680,6 +680,38 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pad name="15" x="17.78" y="0" drill="1" diameter="1.6764" rot="R90"/>
 <rectangle x1="17.526" y1="-0.254" x2="18.034" y2="0.254" layer="51"/>
 </package>
+<package name="SPST_SMT_19192">
+<description>&lt;b&gt;4UCON:&lt;/b&gt; 19192</description>
+<wire x1="-3.35" y1="1.3" x2="3.35" y2="1.3" width="0.127" layer="51"/>
+<wire x1="3.35" y1="1.3" x2="3.35" y2="-1.3" width="0.2032" layer="51"/>
+<wire x1="3.35" y1="-1.3" x2="1.4" y2="-1.3" width="0.127" layer="51"/>
+<wire x1="1.4" y1="-1.3" x2="0.1" y2="-1.3" width="0.127" layer="51"/>
+<wire x1="0.1" y1="-1.3" x2="-3.35" y2="-1.3" width="0.127" layer="51"/>
+<wire x1="-3.35" y1="-1.3" x2="-3.35" y2="1.3" width="0.2032" layer="51"/>
+<wire x1="1.4" y1="-2.8" x2="0.1" y2="-2.8" width="0.2032" layer="51"/>
+<wire x1="0.1" y1="-2.8" x2="0.1" y2="-1.3" width="0.2032" layer="51"/>
+<wire x1="1.4" y1="-2.8" x2="1.4" y2="-1.3" width="0.2032" layer="51"/>
+<wire x1="-0.1" y1="-2.8" x2="-1.4" y2="-2.8" width="0.2032" layer="51"/>
+<wire x1="-1.4" y1="-2.8" x2="-1.4" y2="-1.3" width="0.2032" layer="51"/>
+<wire x1="-0.1" y1="-2.8" x2="-0.1" y2="-1.3" width="0.2032" layer="51"/>
+<wire x1="-2.9" y1="-1.3" x2="2.9" y2="-1.3" width="0.2032" layer="21"/>
+<wire x1="-3.4" y1="0.4" x2="-3.4" y2="-0.4" width="0.2032" layer="21"/>
+<wire x1="3.4" y1="0.4" x2="3.4" y2="-0.4" width="0.2032" layer="21"/>
+<wire x1="-1.7" y1="1.3" x2="0.1" y2="1.3" width="0.2032" layer="21"/>
+<smd name="GND4" x="3.65" y="-1" dx="1" dy="0.8" layer="1"/>
+<smd name="GND2" x="-3.65" y="-1" dx="1" dy="0.8" layer="1"/>
+<smd name="GND1" x="-3.65" y="1" dx="1" dy="0.8" layer="1"/>
+<smd name="GND3" x="3.65" y="1" dx="1" dy="0.8" layer="1"/>
+<smd name="B" x="0.75" y="1.75" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="C" x="2.25" y="1.75" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<smd name="A" x="-2.25" y="1.75" dx="1.5" dy="0.7" layer="1" rot="R90"/>
+<text x="-1" y="-2.5" size="0.8128" layer="51">0</text>
+<text x="0.5" y="-2.5" size="0.8128" layer="51">1</text>
+<text x="-4.2" y="2.726" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
+<text x="-4.2" y="-3.97" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
+<hole x="-1.5" y="0" drill="0.9"/>
+<hole x="1.5" y="0" drill="0.9"/>
+</package>
 </packages>
 <symbols>
 <symbol name="PINHD15">
@@ -704,6 +736,16 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pin name="13" x="-2.54" y="-12.7" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="14" x="-2.54" y="-15.24" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="15" x="-2.54" y="-17.78" visible="pad" length="short" direction="pas" function="dot"/>
+</symbol>
+<symbol name="SWITCH_SPST">
+<wire x1="-2.54" y1="0" x2="0" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0.635" y2="0" width="0.127" layer="94"/>
+<circle x="0" y="0" radius="0.3592" width="0.2032" layer="94"/>
+<circle x="-2.54" y="0" radius="0.3592" width="0.2032" layer="94"/>
+<text x="-4.445" y="-6.35" size="1.27" layer="95">&gt;NAME</text>
+<text x="-5.08" y="3.81" size="1.27" layer="96">&gt;VALUE</text>
+<pin name="P" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
+<pin name="S" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -730,6 +772,26 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <connect gate="G$1" pin="7" pad="7"/>
 <connect gate="G$1" pin="8" pad="8"/>
 <connect gate="G$1" pin="9" pad="9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SWITCH_SPST" prefix="SW" uservalue="yes">
+<description>&lt;b&gt;Switch - SPST&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;4UCon 19192 (6.7x2.6mm SMT)&lt;/li&gt;
+&lt;/ul&gt;</description>
+<gates>
+<gate name="G$1" symbol="SWITCH_SPST" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SPST_SMT_19192">
+<connects>
+<connect gate="G$1" pin="P" pad="B"/>
+<connect gate="G$1" pin="S" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -900,6 +962,8 @@ http://dangerousprototypes.com</description>
 <part name="R4" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
 <part name="JP4" library="adafruit" deviceset="PINHD-2X4" device=""/>
 <part name="JP5" library="adafruit" deviceset="PINHD-2X4" device=""/>
+<part name="SW1" library="microbuilder" deviceset="SWITCH_SPST" device=""/>
+<part name="JP6" library="ATTAMI-V0.00" deviceset="HEADER-1X2" device="ROUND"/>
 </parts>
 <sheets>
 <sheet>
@@ -931,9 +995,9 @@ A5
 A6
 A7
 5V
+RESET
 GND
-GND
-RAW</text>
+VIN</text>
 <text x="-2.54" y="-38.1" size="1.778" layer="91">https://github.com/shenkarSElab/nano24rf
 
 nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/11/nano.jpg</text>
@@ -965,7 +1029,12 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <instance part="R3" gate="G$1" x="22.86" y="55.88" rot="R90"/>
 <instance part="R4" gate="G$1" x="27.94" y="55.88" rot="R90"/>
 <instance part="JP4" gate="A" x="2.54" y="48.26"/>
-<instance part="JP5" gate="A" x="2.54" y="83.82"/>
+<instance part="JP5" gate="A" x="2.54" y="33.02"/>
+<instance part="SW1" gate="G$1" x="139.7" y="-5.08" smashed="yes">
+<attribute name="NAME" x="130.175" y="-8.89" size="1.27" layer="95"/>
+<attribute name="VALUE" x="134.62" y="-1.27" size="1.27" layer="96"/>
+</instance>
+<instance part="JP6" gate="G$1" x="152.4" y="15.24"/>
 </instances>
 <busses>
 </busses>
@@ -996,12 +1065,13 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <wire x1="104.14" y1="46.99" x2="104.14" y2="52.07" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="13"/>
-<wire x1="43.18" y1="35.56" x2="33.02" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="JP1" gate="G$1" pin="3"/>
 <wire x1="43.18" y1="60.96" x2="33.02" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP6" gate="G$1" pin="2"/>
+<wire x1="137.16" y1="15.24" x2="149.86" y2="15.24" width="0.1524" layer="91"/>
+<label x="137.16" y="15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -1018,9 +1088,14 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 </net>
 <net name="RAW" class="0">
 <segment>
-<pinref part="JP1" gate="G$1" pin="15"/>
-<wire x1="43.18" y1="30.48" x2="33.02" y2="30.48" width="0.1524" layer="91"/>
-<label x="33.02" y="27.94" size="1.778" layer="95"/>
+<wire x1="134.62" y1="-5.08" x2="127" y2="-5.08" width="0.1524" layer="91"/>
+<label x="127" y="-5.08" size="1.778" layer="95"/>
+<pinref part="SW1" gate="G$1" pin="P"/>
+</segment>
+<segment>
+<pinref part="JP6" gate="G$1" pin="1"/>
+<wire x1="149.86" y1="17.78" x2="137.16" y2="17.78" width="0.1524" layer="91"/>
+<label x="137.16" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -1066,24 +1141,6 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <pinref part="JP2" gate="G$1" pin="7"/>
 <wire x1="68.58" y1="50.8" x2="76.2" y2="50.8" width="0.1524" layer="91"/>
 <label x="73.66" y="50.8" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="VOUT" class="0">
-<segment>
-<pinref part="D2" gate="D" pin="C"/>
-<wire x1="91.44" y1="10.16" x2="91.44" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="FET2" gate="G$1" pin="1"/>
-<wire x1="91.44" y1="2.54" x2="104.14" y2="2.54" width="0.1524" layer="91"/>
-<junction x="91.44" y="2.54"/>
-<label x="91.44" y="10.16" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="D1" gate="D" pin="C"/>
-<pinref part="FET1" gate="G$1" pin="1"/>
-<wire x1="50.8" y1="2.54" x2="38.1" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="2.54" x2="38.1" y2="10.16" width="0.1524" layer="91"/>
-<junction x="38.1" y="2.54"/>
-<label x="38.1" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -1219,6 +1276,34 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <pinref part="JP4" gate="A" pin="2"/>
 <wire x1="7.62" y1="53.34" x2="12.7" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="53.34" x2="12.7" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VIN" class="0">
+<segment>
+<pinref part="D2" gate="D" pin="C"/>
+<wire x1="91.44" y1="10.16" x2="91.44" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="FET2" gate="G$1" pin="1"/>
+<wire x1="91.44" y1="2.54" x2="104.14" y2="2.54" width="0.1524" layer="91"/>
+<junction x="91.44" y="2.54"/>
+<label x="91.44" y="10.16" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="D1" gate="D" pin="C"/>
+<pinref part="FET1" gate="G$1" pin="1"/>
+<wire x1="50.8" y1="2.54" x2="38.1" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="2.54" x2="38.1" y2="10.16" width="0.1524" layer="91"/>
+<junction x="38.1" y="2.54"/>
+<label x="38.1" y="10.16" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="G$1" pin="15"/>
+<wire x1="43.18" y1="30.48" x2="33.02" y2="30.48" width="0.1524" layer="91"/>
+<label x="33.02" y="27.94" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SW1" gate="G$1" pin="S"/>
+<wire x1="142.24" y1="-5.08" x2="149.86" y2="-5.08" width="0.1524" layer="91"/>
+<label x="144.78" y="-5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
