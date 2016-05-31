@@ -1265,13 +1265,13 @@ http://dangerousprototypes.com</description>
 <part name="U2" library="microbuilder" deviceset="VREG_SOT23" device="SOT23_WIDE"/>
 <part name="C1" library="ATTAMI-V0.00" deviceset="CAP" device="0805"/>
 <part name="C2" library="ATTAMI-V0.00" deviceset="CAP" device="0805"/>
-<part name="SW2" library="microbuilder" deviceset="SWITCH_SPST" device=""/>
 <part name="I2CPORT" library="adafruit" deviceset="1X4" device="-CLEANBIG"/>
 <part name="CN2" library="adafruit" deviceset="1X4" device="-CLEANBIG"/>
 <part name="CN1" library="adafruit" deviceset="1X4" device="-CLEANBIG"/>
 <part name="CN3" library="adafruit" deviceset="1X4" device="-CLEANBIG"/>
 <part name="JP3" library="adafruit" deviceset="PINHD-1X1" device="CB"/>
 <part name="SJ2" library="ATTAMI-V0.00" deviceset="JUMPER-PAD-3-2OF3_NC_BY_TRACE" device="_SMALL" value=""/>
+<part name="CN4" library="adafruit" deviceset="1X4" device="-CLEANBIG"/>
 </parts>
 <sheets>
 <sheet>
@@ -1352,10 +1352,6 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <attribute name="NAME" x="159.004" y="56.261" size="1.778" layer="95"/>
 <attribute name="VALUE" x="159.004" y="56.261" size="1.778" layer="96"/>
 </instance>
-<instance part="SW2" gate="G$1" x="99.06" y="63.5" smashed="yes" rot="R90">
-<attribute name="NAME" x="95.885" y="62.23" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="95.25" y="58.42" size="1.27" layer="96" rot="R90"/>
-</instance>
 <instance part="I2CPORT" gate="G$1" x="-27.94" y="45.72" smashed="yes" rot="R180">
 <attribute name="NAME" x="-33.02" y="38.1" size="1.27" layer="95" font="vector"/>
 </instance>
@@ -1369,8 +1365,11 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <attribute name="NAME" x="-7.62" y="20.32" size="1.27" layer="95" font="vector"/>
 </instance>
 <instance part="JP3" gate="G$1" x="152.4" y="5.08"/>
-<instance part="SJ2" gate="G$1" x="-12.7" y="50.8" smashed="yes">
-<attribute name="NAME" x="-9.779" y="54.61" size="1.778" layer="95" rot="R270"/>
+<instance part="SJ2" gate="G$1" x="-12.7" y="48.26" smashed="yes">
+<attribute name="NAME" x="-9.779" y="52.07" size="1.778" layer="95" rot="R270"/>
+</instance>
+<instance part="CN4" gate="G$1" x="10.16" y="10.16" smashed="yes" rot="R180">
+<attribute name="NAME" x="5.08" y="2.54" size="1.27" layer="95" font="vector"/>
 </instance>
 </instances>
 <busses>
@@ -1422,9 +1421,14 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <pinref part="C1" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="I2CPORT" gate="G$1" pin="1"/>
-<wire x1="-17.78" y1="43.18" x2="-22.86" y2="43.18" width="0.1524" layer="91"/>
-<label x="-22.86" y="43.18" size="1.778" layer="95"/>
+<pinref part="CN4" gate="G$1" pin="4"/>
+<wire x1="15.24" y1="15.24" x2="20.32" y2="15.24" width="0.1524" layer="91"/>
+<label x="17.78" y="15.24" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="I2CPORT" gate="G$1" pin="4"/>
+<wire x1="-22.86" y1="50.8" x2="-17.78" y2="50.8" width="0.1524" layer="91"/>
+<label x="-22.86" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -1525,8 +1529,8 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 </segment>
 <segment>
 <pinref part="SJ2" gate="G$1" pin="1"/>
-<wire x1="-12.7" y1="55.88" x2="-12.7" y2="60.96" width="0.1524" layer="91"/>
-<label x="-12.7" y="58.42" size="1.778" layer="95"/>
+<wire x1="-12.7" y1="53.34" x2="-12.7" y2="60.96" width="0.1524" layer="91"/>
+<label x="-12.7" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -1616,8 +1620,13 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 </segment>
 <segment>
 <pinref part="SJ2" gate="G$1" pin="3"/>
-<wire x1="-12.7" y1="45.72" x2="-12.7" y2="40.64" width="0.1524" layer="91"/>
-<label x="-12.7" y="43.18" size="1.778" layer="95"/>
+<wire x1="-12.7" y1="43.18" x2="-12.7" y2="38.1" width="0.1524" layer="91"/>
+<label x="-12.7" y="40.64" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CN4" gate="G$1" pin="1"/>
+<wire x1="15.24" y1="7.62" x2="20.32" y2="7.62" width="0.1524" layer="91"/>
+<label x="17.78" y="7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -1629,9 +1638,9 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <wire x1="22.86" y1="50.8" x2="22.86" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<label x="-22.86" y="48.26" size="1.778" layer="95"/>
-<pinref part="I2CPORT" gate="G$1" pin="3"/>
-<wire x1="-17.78" y1="48.26" x2="-22.86" y2="48.26" width="0.1524" layer="91"/>
+<label x="-22.86" y="45.72" size="1.778" layer="95"/>
+<pinref part="I2CPORT" gate="G$1" pin="2"/>
+<wire x1="-17.78" y1="45.72" x2="-22.86" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -1643,9 +1652,9 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <label x="33.02" y="45.72" size="1.778" layer="95"/>
 </segment>
 <segment>
-<label x="-22.86" y="45.72" size="1.778" layer="95"/>
-<pinref part="I2CPORT" gate="G$1" pin="2"/>
-<wire x1="-17.78" y1="45.72" x2="-22.86" y2="45.72" width="0.1524" layer="91"/>
+<label x="-22.86" y="43.18" size="1.778" layer="95"/>
+<pinref part="I2CPORT" gate="G$1" pin="1"/>
+<wire x1="-22.86" y1="43.18" x2="-17.78" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VIN" class="0">
@@ -1680,8 +1689,8 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <segment>
 <pinref part="U$2" gate="G$1" pin="VCC"/>
 <label x="99.06" y="53.34" size="1.778" layer="95"/>
-<pinref part="SW2" gate="G$1" pin="P"/>
-<wire x1="99.06" y1="58.42" x2="99.06" y2="46.99" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="66.04" x2="99.06" y2="46.99" width="0.1524" layer="91"/>
+<pinref part="SJ1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="V-ADJ" class="0">
@@ -1699,12 +1708,6 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <label x="86.36" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="SJ1" gate="G$1" pin="2"/>
-<pinref part="SW2" gate="G$1" pin="S"/>
-</segment>
-</net>
 <net name="RST" class="0">
 <segment>
 <pinref part="JP2" gate="G$1" pin="13"/>
@@ -1712,11 +1715,35 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <label x="73.66" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$9" class="0">
+<net name="RX" class="0">
 <segment>
-<pinref part="I2CPORT" gate="G$1" pin="4"/>
+<pinref part="CN4" gate="G$1" pin="3"/>
+<wire x1="15.24" y1="12.7" x2="20.32" y2="12.7" width="0.1524" layer="91"/>
+<label x="17.78" y="12.7" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JP2" gate="G$1" pin="14"/>
+<wire x1="68.58" y1="33.02" x2="76.2" y2="33.02" width="0.1524" layer="91"/>
+<label x="73.66" y="33.02" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="TX" class="0">
+<segment>
+<pinref part="CN4" gate="G$1" pin="2"/>
+<wire x1="15.24" y1="10.16" x2="20.32" y2="10.16" width="0.1524" layer="91"/>
+<label x="17.78" y="10.16" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JP2" gate="G$1" pin="15"/>
+<wire x1="68.58" y1="30.48" x2="76.2" y2="30.48" width="0.1524" layer="91"/>
+<label x="73.66" y="30.48" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="I2CPORT" gate="G$1" pin="3"/>
 <pinref part="SJ2" gate="G$1" pin="2"/>
-<wire x1="-22.86" y1="50.8" x2="-17.78" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="48.26" x2="-17.78" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
