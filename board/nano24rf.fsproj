@@ -13,8 +13,8 @@
 			<File path=".\nano24rf.fsx" isopened="1"/>
 		</Pcb>
 		<ARouteSessions>
-			<Session name="nano24rf" date="2016-08-04 14:50:01" path=".\autoroute_nano24rf_160804145001\">
-			<File path=".\autoroute_nano24rf_160804145001\nano24rf_367-19sa.fsb" isopened="0"/>
+			<Session name="nano24rf" date="2016-08-04 15:10:08" path=".\autoroute_nano24rf_160804151008\">
+			<File path=".\autoroute_nano24rf_160804151008\nano24rf_388-14s.fsb" isopened="0"/>
 			</Session>
 		</ARouteSessions>
 	</Document>
