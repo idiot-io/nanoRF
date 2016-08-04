@@ -305,10 +305,19 @@ http://dangerousprototypes.com</description>
 </library>
 <library name="nanorf24">
 <packages>
+<package name="FATPAD">
+<smd name="P$1" x="-2.794" y="0" dx="2.286" dy="2.032" layer="1" rot="R180"/>
+<smd name="P$2" x="0" y="0" dx="2.286" dy="2.032" layer="1" rot="R180"/>
+<smd name="P$3" x="2.794" y="0" dx="2.286" dy="2.032" layer="1" rot="R180"/>
+</package>
+</packages>
+</library>
+<library name="nano24rf">
+<description>Generated from &lt;b&gt;nano24rf.sch&lt;/b&gt;&lt;p&gt;
+by exp-lbrs.ulp</description>
+<packages>
 <package name="SMD1,27-2,54">
 <description>&lt;b&gt;SMD PAD&lt;/b&gt;</description>
-<smd name="1" x="1.63" y="0.1" dx="0.9" dy="2.5" layer="1"/>
-<text x="-0.8" y="-2.4" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 <wire x1="0" y1="0" x2="0" y2="18" width="0.127" layer="21"/>
 <wire x1="0" y1="18" x2="12" y2="18" width="0.127" layer="21"/>
 <wire x1="12" y1="18" x2="12" y2="0" width="0.127" layer="21"/>
@@ -318,17 +327,11 @@ http://dangerousprototypes.com</description>
 <wire x1="10.34" y1="1.52" x2="11.52" y2="1.52" width="0.127" layer="21"/>
 <wire x1="11.52" y1="1.52" x2="11.52" y2="1.49" width="0.127" layer="21"/>
 <wire x1="11.52" y1="1.49" x2="11.52" y2="0.34" width="0.127" layer="21"/>
-<wire x1="11.52" y1="0.03" x2="11.52" y2="0.34" width="0.127" layer="21"/>
+<wire x1="11.52" y1="0.34" x2="11.52" y2="0.03" width="0.127" layer="21"/>
 <wire x1="11.52" y1="0.34" x2="10.37" y2="1.49" width="0.127" layer="21"/>
 <wire x1="10.37" y1="1.49" x2="11.44" y2="1.49" width="0.127" layer="21"/>
-<wire x1="11.52" y1="1.49" x2="11.44" y2="1.49" width="0.127" layer="21"/>
+<wire x1="11.44" y1="1.49" x2="11.52" y2="1.49" width="0.127" layer="21"/>
 <wire x1="11.44" y1="1.49" x2="10.36" y2="0.41" width="0.127" layer="21"/>
-<smd name="2" x="2.9" y="0.1" dx="0.9" dy="2.5" layer="1"/>
-<smd name="3" x="4.17" y="0.1" dx="0.9" dy="2.5" layer="1"/>
-<smd name="4" x="5.44" y="0.1" dx="0.9" dy="2.5" layer="1"/>
-<smd name="5" x="6.71" y="0.1" dx="0.9" dy="2.5" layer="1"/>
-<smd name="6" x="7.98" y="0.1" dx="0.9" dy="2.5" layer="1"/>
-<smd name="7" x="9.25" y="0.1" dx="0.9" dy="2.5" layer="1"/>
 <wire x1="1.27" y1="10.16" x2="1.27" y2="11.43" width="0.127" layer="20"/>
 <wire x1="1.27" y1="11.43" x2="1.27" y2="16.51" width="0.127" layer="20"/>
 <wire x1="1.27" y1="16.51" x2="2.54" y2="16.51" width="0.127" layer="20"/>
@@ -346,7 +349,7 @@ http://dangerousprototypes.com</description>
 <wire x1="8.89" y1="16.51" x2="11.43" y2="16.51" width="0.127" layer="20"/>
 <wire x1="1.27" y1="11.43" x2="7.62" y2="11.43" width="0.127" layer="20"/>
 <wire x1="1.27" y1="3.81" x2="1.27" y2="6.35" width="0.127" layer="20"/>
-<wire x1="1.27" y1="7.62" x2="1.27" y2="6.35" width="0.127" layer="20"/>
+<wire x1="1.27" y1="6.35" x2="1.27" y2="7.62" width="0.127" layer="20"/>
 <wire x1="1.27" y1="6.35" x2="3.81" y2="3.81" width="0.127" layer="20"/>
 <wire x1="3.81" y1="3.81" x2="3.81" y2="5.08" width="0.127" layer="20"/>
 <wire x1="3.81" y1="5.08" x2="3.81" y2="7.62" width="0.127" layer="20"/>
@@ -361,23 +364,22 @@ http://dangerousprototypes.com</description>
 <wire x1="8.89" y1="7.62" x2="11.43" y2="7.62" width="0.127" layer="20"/>
 <wire x1="11.43" y1="7.62" x2="11.43" y2="3.81" width="0.127" layer="20"/>
 <wire x1="11.43" y1="3.81" x2="8.89" y2="3.81" width="0.127" layer="20"/>
+<smd name="1" x="1.63" y="0.1" dx="0.9" dy="2.5" layer="1"/>
+<smd name="2" x="2.9" y="0.1" dx="0.9" dy="2.5" layer="1"/>
+<smd name="3" x="4.17" y="0.1" dx="0.9" dy="2.5" layer="1"/>
+<smd name="4" x="5.44" y="0.1" dx="0.9" dy="2.5" layer="1"/>
+<smd name="5" x="6.71" y="0.1" dx="0.9" dy="2.5" layer="1"/>
+<smd name="6" x="7.98" y="0.1" dx="0.9" dy="2.5" layer="1"/>
+<smd name="7" x="9.25" y="0.1" dx="0.9" dy="2.5" layer="1"/>
+<text x="-0.8" y="-2.4" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 </package>
-<package name="FATPAD">
-<smd name="P$1" x="-2.794" y="0" dx="2.286" dy="2.032" layer="1" rot="R180"/>
-<smd name="P$2" x="0" y="0" dx="2.286" dy="2.032" layer="1" rot="R180"/>
-<smd name="P$3" x="2.794" y="0" dx="2.286" dy="2.032" layer="1" rot="R180"/>
-</package>
-</packages>
-</library>
-<library name="pinhead+">
-<packages>
 <package name="2X03_SMT">
 <wire x1="-3.81" y1="2.54" x2="3.81" y2="2.54" width="0.127" layer="21"/>
 <wire x1="3.81" y1="2.54" x2="3.81" y2="-2.54" width="0.127" layer="21"/>
 <wire x1="3.81" y1="-2.54" x2="-3.81" y2="-2.54" width="0.127" layer="21"/>
 <wire x1="-3.81" y1="-2.54" x2="-3.81" y2="2.54" width="0.127" layer="21"/>
-<smd name="2" x="-2.54" y="2.921" dx="1.27" dy="2.032" layer="1"/>
 <smd name="1" x="-2.54" y="-2.921" dx="1.27" dy="2.032" layer="1" rot="R180"/>
+<smd name="2" x="-2.54" y="2.921" dx="1.27" dy="2.032" layer="1"/>
 <smd name="3" x="0" y="-2.921" dx="1.27" dy="2.032" layer="1" rot="R180"/>
 <smd name="4" x="0" y="2.921" dx="1.27" dy="2.032" layer="1"/>
 <smd name="5" x="2.54" y="-2.921" dx="1.27" dy="2.032" layer="1" rot="R180"/>
@@ -593,8 +595,8 @@ design rules under a new name.</description>
 <element name="JP2" library="microbuilder" package="1X15_ROUND_70" value="" x="16.51" y="37.973" smashed="yes" rot="R270">
 <attribute name="VALUE" x="13.335" y="57.023" size="0.4064" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="JP3" library="pinhead+" package="2X03_SMT" value="" x="8.89" y="18.923"/>
-<element name="U$7" library="nanorf24" package="SMD1,27-2,54" value="1X7-SMDPADS" x="14.859" y="9.271" smashed="yes" rot="R180"/>
+<element name="JP3" library="nano24rf" package="2X03_SMT" value="" x="8.89" y="18.923"/>
+<element name="U$7" library="nano24rf" package="SMD1,27-2,54" value="1X7-SMDPADS" x="14.859" y="9.271" smashed="yes" rot="R180"/>
 <element name="Q2" library="adafruit" package="SOT23-W" value="" x="12.573" y="33.274" smashed="yes" rot="MR180">
 <attribute name="VALUE" x="14.605" y="33.782" size="0.4064" layer="28" rot="MR180"/>
 </element>
