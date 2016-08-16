@@ -909,7 +909,6 @@ by exp-lbrs.ulp</description>
 <part name="Q1" library="adafruit" deviceset="MOSFET-N" device="WAVE"/>
 <part name="D1" library="dp_devices" deviceset="DIODE" device="-DO-214AC"/>
 <part name="U$3" library="ATTAMI-V0.00" deviceset="GND" device=""/>
-<part name="R1" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
 <part name="U$5" library="ATTAMI-V0.00" deviceset="GND" device=""/>
 <part name="JP1" library="microbuilder" deviceset="HEADER-1X15" device=""/>
 <part name="JP2" library="microbuilder" deviceset="HEADER-1X15" device=""/>
@@ -918,19 +917,20 @@ by exp-lbrs.ulp</description>
 <part name="Q2" library="adafruit" deviceset="MOSFET-N" device="WAVE"/>
 <part name="D2" library="dp_devices" deviceset="DIODE" device="-DO-214AC"/>
 <part name="U$1" library="ATTAMI-V0.00" deviceset="GND" device=""/>
-<part name="R2" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
 <part name="Q3" library="adafruit" deviceset="MOSFET-N" device="WAVE"/>
 <part name="D3" library="dp_devices" deviceset="DIODE" device="-DO-214AC"/>
 <part name="U$2" library="ATTAMI-V0.00" deviceset="GND" device=""/>
-<part name="R3" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
 <part name="Q4" library="adafruit" deviceset="MOSFET-N" device="WAVE"/>
 <part name="D4" library="dp_devices" deviceset="DIODE" device="-DO-214AC"/>
 <part name="U$4" library="ATTAMI-V0.00" deviceset="GND" device=""/>
-<part name="R4" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
 <part name="U$6" library="nanorf24" deviceset="1X3SMD" device=""/>
 <part name="U$8" library="nanorf24" deviceset="1X3SMD" device=""/>
-<part name="R5" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R1" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R2" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R4" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R3" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
 <part name="R6" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R5" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
 </parts>
 <sheets>
 <sheet>
@@ -976,7 +976,6 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <instance part="Q1" gate="G$1" x="35.56" y="96.52"/>
 <instance part="D1" gate="D" x="35.56" y="104.14" rot="R180"/>
 <instance part="U$3" gate="1" x="38.1" y="86.36"/>
-<instance part="R1" gate="G$1" x="25.4" y="93.98"/>
 <instance part="U$5" gate="1" x="27.94" y="27.94"/>
 <instance part="JP1" gate="G$1" x="45.72" y="48.26"/>
 <instance part="JP2" gate="G$1" x="66.04" y="48.26" rot="MR0"/>
@@ -985,19 +984,20 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <instance part="Q2" gate="G$1" x="35.56" y="124.46"/>
 <instance part="D2" gate="D" x="35.56" y="132.08" rot="R180"/>
 <instance part="U$1" gate="1" x="38.1" y="114.3"/>
-<instance part="R2" gate="G$1" x="25.4" y="121.92"/>
 <instance part="Q3" gate="G$1" x="106.68" y="93.98"/>
 <instance part="D3" gate="D" x="106.68" y="101.6" rot="R180"/>
 <instance part="U$2" gate="1" x="109.22" y="83.82"/>
-<instance part="R3" gate="G$1" x="96.52" y="91.44"/>
 <instance part="Q4" gate="G$1" x="106.68" y="121.92"/>
 <instance part="D4" gate="D" x="106.68" y="129.54" rot="R180"/>
 <instance part="U$4" gate="1" x="109.22" y="111.76"/>
-<instance part="R4" gate="G$1" x="96.52" y="119.38"/>
 <instance part="U$6" gate="G$1" x="147.32" y="104.14" rot="R90"/>
 <instance part="U$8" gate="G$1" x="76.2" y="106.68" rot="R90"/>
-<instance part="R5" gate="G$1" x="73.66" y="15.24"/>
-<instance part="R6" gate="G$1" x="73.66" y="10.16"/>
+<instance part="R1" gate="G$1" x="73.66" y="15.24"/>
+<instance part="R2" gate="G$1" x="73.66" y="10.16"/>
+<instance part="R4" gate="G$1" x="30.48" y="116.84" rot="R90"/>
+<instance part="R3" gate="G$1" x="30.48" y="88.9" rot="R90"/>
+<instance part="R6" gate="G$1" x="101.6" y="114.3" rot="R90"/>
+<instance part="R5" gate="G$1" x="101.6" y="86.36" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -1007,6 +1007,11 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <pinref part="Q1" gate="G$1" pin="S"/>
 <pinref part="U$3" gate="1" pin="GND"/>
 <wire x1="38.1" y1="88.9" x2="38.1" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="83.82" x2="33.02" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="83.82" x2="33.02" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="88.9" x2="38.1" y2="88.9" width="0.1524" layer="91"/>
+<junction x="38.1" y="88.9"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="14"/>
@@ -1026,12 +1031,17 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <pinref part="JP3" gate="A" pin="6"/>
 <wire x1="58.42" y1="10.16" x2="68.58" y2="10.16" width="0.1524" layer="91"/>
 <label x="63.5" y="10.16" size="1.778" layer="95"/>
-<pinref part="R6" gate="G$1" pin="1"/>
+<pinref part="R2" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="Q2" gate="G$1" pin="S"/>
 <pinref part="U$1" gate="1" pin="GND"/>
 <wire x1="38.1" y1="116.84" x2="38.1" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="111.76" x2="33.02" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="111.76" x2="33.02" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="116.84" x2="38.1" y2="116.84" width="0.1524" layer="91"/>
+<junction x="38.1" y="116.84"/>
 </segment>
 <segment>
 <wire x1="86.36" y1="2.54" x2="86.36" y2="7.62" width="0.1524" layer="91"/>
@@ -1041,11 +1051,21 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <pinref part="Q3" gate="G$1" pin="S"/>
 <pinref part="U$2" gate="1" pin="GND"/>
 <wire x1="109.22" y1="86.36" x2="109.22" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="101.6" y1="81.28" x2="104.14" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="81.28" x2="104.14" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="86.36" x2="109.22" y2="86.36" width="0.1524" layer="91"/>
+<junction x="109.22" y="86.36"/>
 </segment>
 <segment>
 <pinref part="Q4" gate="G$1" pin="S"/>
 <pinref part="U$4" gate="1" pin="GND"/>
 <wire x1="109.22" y1="114.3" x2="109.22" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="101.6" y1="109.22" x2="104.14" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="109.22" x2="104.14" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="114.3" x2="109.22" y2="114.3" width="0.1524" layer="91"/>
+<junction x="109.22" y="114.3"/>
 </segment>
 </net>
 <net name="FET01" class="0">
@@ -1060,13 +1080,6 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <pinref part="U$8" gate="G$1" pin="P$1"/>
 </segment>
 </net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="Q1" gate="G$1" pin="G"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="30.48" y1="93.98" x2="33.02" y2="93.98" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="D5" class="0">
 <segment>
 <pinref part="JP2" gate="G$1" pin="8"/>
@@ -1074,9 +1087,12 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <label x="73.66" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="20.32" y1="121.92" x2="12.7" y2="121.92" width="0.1524" layer="91"/>
 <label x="15.24" y="121.92" size="1.778" layer="95"/>
+<pinref part="Q2" gate="G$1" pin="G"/>
+<wire x1="30.48" y1="121.92" x2="33.02" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="12.7" y1="121.92" x2="30.48" y2="121.92" width="0.1524" layer="91"/>
+<junction x="30.48" y="121.92"/>
 </segment>
 </net>
 <net name="D6" class="0">
@@ -1086,9 +1102,12 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <label x="73.66" y="50.8" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="20.32" y1="93.98" x2="12.7" y2="93.98" width="0.1524" layer="91"/>
 <label x="15.24" y="93.98" size="1.778" layer="95"/>
+<pinref part="Q1" gate="G$1" pin="G"/>
+<wire x1="30.48" y1="93.98" x2="33.02" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="12.7" y1="93.98" x2="30.48" y2="93.98" width="0.1524" layer="91"/>
+<junction x="30.48" y="93.98"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -1169,7 +1188,7 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <pinref part="JP3" gate="A" pin="2"/>
 <wire x1="58.42" y1="15.24" x2="68.58" y2="15.24" width="0.1524" layer="91"/>
 <label x="63.5" y="15.24" size="1.778" layer="95"/>
-<pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -1237,9 +1256,12 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <label x="73.66" y="60.96" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="91.44" y1="91.44" x2="83.82" y2="91.44" width="0.1524" layer="91"/>
 <label x="86.36" y="91.44" size="1.778" layer="95"/>
+<pinref part="Q3" gate="G$1" pin="G"/>
+<wire x1="101.6" y1="91.44" x2="104.14" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="83.82" y1="91.44" x2="101.6" y2="91.44" width="0.1524" layer="91"/>
+<junction x="101.6" y="91.44"/>
 </segment>
 </net>
 <net name="D9" class="0">
@@ -1249,9 +1271,12 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <label x="73.66" y="58.42" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="91.44" y1="119.38" x2="83.82" y2="119.38" width="0.1524" layer="91"/>
 <label x="86.36" y="119.38" size="1.778" layer="95"/>
+<pinref part="Q4" gate="G$1" pin="G"/>
+<wire x1="101.6" y1="119.38" x2="104.14" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="2"/>
+<wire x1="101.6" y1="119.38" x2="83.82" y2="119.38" width="0.1524" layer="91"/>
+<junction x="101.6" y="119.38"/>
 </segment>
 </net>
 <net name="FET02" class="0">
@@ -1266,13 +1291,6 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <pinref part="U$8" gate="G$1" pin="P$3"/>
 </segment>
 </net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="Q2" gate="G$1" pin="G"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="30.48" y1="121.92" x2="33.02" y2="121.92" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="FET03" class="0">
 <segment>
 <pinref part="Q3" gate="G$1" pin="D"/>
@@ -1283,13 +1301,6 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <wire x1="121.92" y1="99.06" x2="121.92" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="101.6" x2="109.22" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="U$6" gate="G$1" pin="P$1"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="Q3" gate="G$1" pin="G"/>
-<pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="101.6" y1="91.44" x2="104.14" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FET04" class="0">
@@ -1304,21 +1315,14 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <pinref part="U$6" gate="G$1" pin="P$3"/>
 </segment>
 </net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="Q4" gate="G$1" pin="G"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="101.6" y1="119.38" x2="104.14" y2="119.38" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$6" class="0">
 <segment>
 <wire x1="81.28" y1="2.54" x2="81.28" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="81.28" y1="10.16" x2="81.28" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="15.24" x2="78.74" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="U$7" gate="G$1" pin="3V3"/>
-<pinref part="R6" gate="G$1" pin="2"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="78.74" y1="10.16" x2="81.28" y2="10.16" width="0.1524" layer="91"/>
 <junction x="81.28" y="10.16"/>
 </segment>
