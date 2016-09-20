@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xsi:noNamespaceSchemaLocation="Project.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Version current="1"/>
+	<Format>Project</Format>
+	<Header>
+		<Program name="TopoR" version="6.2"/>
+		<GUID>{B74C0877-7F72-4B19-89D2-AC9D7D9C3063}</GUID>
+		<Annotation>Project file</Annotation>
+	</Header>
+	<Document>
+		<LocalLibrary />
+		<Pcb>
+			<File path=".\nano24rf.fsx" isopened="1"/>
+			<File path=".\nano24rf-single.fsx" isopened="0"/>
+		</Pcb>
+		<Export path="C:\dev\nano24rf\board\topor\"/>
+		<ARouteSessions>
+		</ARouteSessions>
+	</Document>
+</Project>
