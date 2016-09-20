@@ -606,45 +606,6 @@ http://dangerousprototypes.com</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="nanorf24">
-<packages>
-<package name="FATPAD">
-<smd name="P$1" x="-2.794" y="0" dx="2.286" dy="2.032" layer="1" rot="R180"/>
-<smd name="P$2" x="0" y="0" dx="2.286" dy="2.032" layer="1" rot="R180"/>
-<smd name="P$3" x="2.794" y="0" dx="2.286" dy="2.032" layer="1" rot="R180"/>
-</package>
-</packages>
-<symbols>
-<symbol name="1X3PAD">
-<wire x1="-5.08" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="5.08" x2="5.08" y2="0" width="0.254" layer="94"/>
-<wire x1="5.08" y1="0" x2="-5.08" y2="0" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="0" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
-<pin name="P$1" x="-5.08" y="7.62" visible="pad" length="short" rot="R270"/>
-<pin name="P$2" x="0" y="7.62" visible="pad" length="short" rot="R270"/>
-<pin name="P$3" x="5.08" y="7.62" visible="pad" length="short" rot="R270"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="1X3SMD">
-<gates>
-<gate name="G$1" symbol="1X3PAD" x="0" y="-2.54"/>
-</gates>
-<devices>
-<device name="" package="FATPAD">
-<connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
-<connect gate="G$1" pin="P$3" pad="P$3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="nano24rf">
 <description>Generated from &lt;b&gt;nano24rf.sch&lt;/b&gt;&lt;p&gt;
 by exp-lbrs.ulp</description>
@@ -795,6 +756,12 @@ by exp-lbrs.ulp</description>
 <text x="-4.445" y="-3.81" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
 <text x="5.715" y="-3.81" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
 </package>
+<package name="FATPAD4">
+<smd name="P$1" x="-3.81" y="0" dx="2.032" dy="2.032" layer="1" rot="R180"/>
+<smd name="P$2" x="-1.27" y="0" dx="2.032" dy="2.032" layer="1" rot="R180"/>
+<smd name="P$3" x="1.27" y="0" dx="2.032" dy="2.032" layer="1" rot="R180"/>
+<smd name="P$4" x="3.81" y="0" dx="2.032" dy="2.032" layer="1" rot="R180"/>
+</package>
 </packages>
 <symbols>
 <symbol name="1X7_CONST">
@@ -823,6 +790,16 @@ by exp-lbrs.ulp</description>
 <pin name="6" x="5.08" y="-2.54" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
 <text x="-6.35" y="5.715" size="1.778" layer="95">&gt;NAME</text>
 <text x="-6.35" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="1X4PAD">
+<wire x1="-5.08" y1="0" x2="10.16" y2="0" width="0.254" layer="94"/>
+<wire x1="10.16" y1="0" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="0" width="0.254" layer="94"/>
+<pin name="P$1" x="-5.08" y="2.54" visible="pad" length="short" rot="R270"/>
+<pin name="P$2" x="0" y="2.54" visible="pad" length="short" rot="R270"/>
+<pin name="P$3" x="5.08" y="2.54" visible="pad" length="short" rot="R270"/>
+<pin name="P$4" x="10.16" y="2.54" visible="pad" length="short" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -894,6 +871,24 @@ by exp-lbrs.ulp</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="FATPAD4">
+<gates>
+<gate name="G$1" symbol="1X4PAD" x="-2.54" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="FATPAD4">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="P$3" pad="P$3"/>
+<connect gate="G$1" pin="P$4" pad="P$4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -923,14 +918,16 @@ by exp-lbrs.ulp</description>
 <part name="Q4" library="adafruit" deviceset="MOSFET-N" device="WAVE"/>
 <part name="D4" library="dp_devices" deviceset="DIODE" device="-DO-214AC"/>
 <part name="U$4" library="ATTAMI-V0.00" deviceset="GND" device=""/>
-<part name="U$6" library="nanorf24" deviceset="1X3SMD" device=""/>
-<part name="U$8" library="nanorf24" deviceset="1X3SMD" device=""/>
+<part name="U$6" library="nano24rf" deviceset="FATPAD4" device=""/>
+<part name="U$8" library="nano24rf" deviceset="FATPAD4" device=""/>
 <part name="R1" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
 <part name="R2" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
 <part name="R4" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
 <part name="R3" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
 <part name="R6" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
 <part name="R5" library="ATTAMI-V0.00" deviceset="RESISTOR" device="0805-RES"/>
+<part name="U$9" library="ATTAMI-V0.00" deviceset="GND" device=""/>
+<part name="U$10" library="ATTAMI-V0.00" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -998,6 +995,8 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <instance part="R3" gate="G$1" x="30.48" y="88.9" rot="R90"/>
 <instance part="R6" gate="G$1" x="101.6" y="114.3" rot="R90"/>
 <instance part="R5" gate="G$1" x="101.6" y="86.36" rot="R90"/>
+<instance part="U$9" gate="1" x="139.7" y="114.3" rot="R270"/>
+<instance part="U$10" gate="1" x="66.04" y="116.84" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -1067,6 +1066,16 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <wire x1="104.14" y1="114.3" x2="109.22" y2="114.3" width="0.1524" layer="91"/>
 <junction x="109.22" y="114.3"/>
 </segment>
+<segment>
+<pinref part="U$10" gate="1" pin="GND"/>
+<pinref part="U$8" gate="G$1" pin="P$4"/>
+<wire x1="68.58" y1="116.84" x2="73.66" y2="116.84" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$6" gate="G$1" pin="P$4"/>
+<pinref part="U$9" gate="1" pin="GND"/>
+<wire x1="144.78" y1="114.3" x2="142.24" y2="114.3" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="FET01" class="0">
 <segment>
@@ -1074,7 +1083,7 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <pinref part="D1" gate="D" pin="A"/>
 <wire x1="38.1" y1="101.6" x2="38.1" y2="104.14" width="0.1524" layer="91"/>
 <junction x="38.1" y="104.14"/>
-<wire x1="68.58" y1="101.6" x2="53.34" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="101.6" x2="53.34" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="101.6" x2="53.34" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="104.14" x2="38.1" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="U$8" gate="G$1" pin="P$1"/>
@@ -1212,7 +1221,7 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <label x="33.02" y="27.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="68.58" y1="106.68" x2="50.8" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="106.68" x2="50.8" y2="106.68" width="0.1524" layer="91"/>
 <label x="50.8" y="106.68" size="1.778" layer="95"/>
 <pinref part="U$8" gate="G$1" pin="P$2"/>
 </segment>
@@ -1227,7 +1236,7 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <label x="25.4" y="104.14" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="139.7" y1="104.14" x2="124.46" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="104.14" x2="124.46" y2="104.14" width="0.1524" layer="91"/>
 <label x="121.92" y="104.14" size="1.778" layer="95"/>
 <pinref part="U$6" gate="G$1" pin="P$2"/>
 </segment>
@@ -1286,7 +1295,7 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <wire x1="38.1" y1="129.54" x2="38.1" y2="132.08" width="0.1524" layer="91"/>
 <junction x="38.1" y="132.08"/>
 <wire x1="53.34" y1="132.08" x2="38.1" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="111.76" x2="53.34" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="111.76" x2="53.34" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="111.76" x2="53.34" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="U$8" gate="G$1" pin="P$3"/>
 </segment>
@@ -1297,7 +1306,7 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <pinref part="D3" gate="D" pin="A"/>
 <wire x1="109.22" y1="99.06" x2="109.22" y2="101.6" width="0.1524" layer="91"/>
 <junction x="109.22" y="101.6"/>
-<wire x1="139.7" y1="99.06" x2="121.92" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="99.06" x2="121.92" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="99.06" x2="121.92" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="101.6" x2="109.22" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="U$6" gate="G$1" pin="P$1"/>
@@ -1310,7 +1319,7 @@ nice nano pintout -&gt; http://christianto.tjahyadi.com/wp-content/uploads/2014/
 <wire x1="109.22" y1="127" x2="109.22" y2="129.54" width="0.1524" layer="91"/>
 <junction x="109.22" y="129.54"/>
 <wire x1="124.46" y1="129.54" x2="109.22" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="109.22" x2="124.46" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="109.22" x2="124.46" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="109.22" x2="124.46" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="U$6" gate="G$1" pin="P$3"/>
 </segment>

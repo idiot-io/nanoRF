@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mic" unit="mic" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.025" unitdist="inch" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -457,6 +457,12 @@ by exp-lbrs.ulp</description>
 <text x="-3.81" y="5.715" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-3.81" y="-6.985" size="1.27" layer="27">&gt;VALUE</text>
 </package>
+<package name="FATPAD4">
+<smd name="P$1" x="-3.81" y="0" dx="2.032" dy="2.032" layer="1" rot="R180"/>
+<smd name="P$2" x="-1.27" y="0" dx="2.032" dy="2.032" layer="1" rot="R180"/>
+<smd name="P$3" x="1.27" y="0" dx="2.032" dy="2.032" layer="1" rot="R180"/>
+<smd name="P$4" x="3.81" y="0" dx="2.032" dy="2.032" layer="1" rot="R180"/>
+</package>
 </packages>
 <symbols>
 <symbol name="GND">
@@ -588,6 +594,16 @@ by exp-lbrs.ulp</description>
 <pin name="6" x="5.08" y="-2.54" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
 <text x="-6.35" y="5.715" size="1.778" layer="95">&gt;NAME</text>
 <text x="-6.35" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="1X4PAD">
+<wire x1="-5.08" y1="0" x2="10.16" y2="0" width="0.254" layer="94"/>
+<wire x1="10.16" y1="0" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="0" width="0.254" layer="94"/>
+<pin name="P$1" x="-5.08" y="2.54" visible="pad" length="short" rot="R270"/>
+<pin name="P$2" x="0" y="2.54" visible="pad" length="short" rot="R270"/>
+<pin name="P$3" x="5.08" y="2.54" visible="pad" length="short" rot="R270"/>
+<pin name="P$4" x="10.16" y="2.54" visible="pad" length="short" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -816,6 +832,42 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <connect gate="A" pin="4" pad="4"/>
 <connect gate="A" pin="5" pad="5"/>
 <connect gate="A" pin="6" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="1X4SMD">
+<gates>
+<gate name="G$2" symbol="1X4PAD" x="-2.54" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="FATPAD4">
+<connects>
+<connect gate="G$2" pin="P$1" pad="P$1"/>
+<connect gate="G$2" pin="P$2" pad="P$2"/>
+<connect gate="G$2" pin="P$3" pad="P$3"/>
+<connect gate="G$2" pin="P$4" pad="P$4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FATPAD4">
+<gates>
+<gate name="G$1" symbol="1X4PAD" x="-2.54" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="FATPAD4">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="P$3" pad="P$3"/>
+<connect gate="G$1" pin="P$4" pad="P$4"/>
 </connects>
 <technologies>
 <technology name=""/>
