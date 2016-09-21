@@ -10,8 +10,7 @@
 	<Document>
 		<LocalLibrary />
 		<Pcb>
-			<File path=".\nano24rf.fsx" isopened="1"/>
-			<File path=".\nano24rf-single.fsx" isopened="0"/>
+			<File path=".\nano24rf_403-10sa.fsx" isopened="1"/>
 		</Pcb>
 		<Export path="C:\dev\nano24rf\board\topor\"/>
 		<ARouteSessions>
