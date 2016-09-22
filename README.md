@@ -1,5 +1,10 @@
 # nano24rf
 
+##rev4
+![](http://i.imgur.com/bc8OjXh.png)
+
+![](http://i.imgur.com/1EUWABU.png)
+
 ##rev3
 ![](http://i.imgur.com/p82YC9m.png)
 
