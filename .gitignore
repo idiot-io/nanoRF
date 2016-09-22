@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 #eagle ignore
 *.*#*
 *.lck
 *.lock
+=======
+#eagle ignore
+*.*#*
+*.lck
+>>>>>>> 755b6620b4a9711ea18eef16dee77a37640388b1
