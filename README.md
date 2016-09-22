@@ -1,5 +1,8 @@
 # nano24rf
 
+should look something like this with nano on top, here is rev3, waiting for rev4 board to arrive from elecrow
+![](http://i.imgur.com/fRQA5Nw.png)
+
 ##rev4
 ![](http://i.imgur.com/bc8OjXh.png)
 
