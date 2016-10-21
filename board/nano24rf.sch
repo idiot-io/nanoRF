@@ -941,8 +941,8 @@ by exp-lbrs.ulp</description>
 <part name="D1" library="dp_devices" deviceset="DIODE" device="-DO-214AC"/>
 <part name="U$3" library="ATTAMI-V0.00" deviceset="GND" device=""/>
 <part name="U$5" library="ATTAMI-V0.00" deviceset="GND" device=""/>
-<part name="JP1" library="nano24rf" deviceset="HEADER-1X15" device="LONG"/>
-<part name="JP2" library="nano24rf" deviceset="HEADER-1X15" device="LONG"/>
+<part name="JP1" library="nano24rf" deviceset="HEADER-1X15" device="RND"/>
+<part name="JP2" library="nano24rf" deviceset="HEADER-1X15" device="RND"/>
 <part name="JP3" library="nano24rf" deviceset="PINHD-2X3" device="SMT"/>
 <part name="RF24" library="nano24rf" deviceset="1X7-SMDPADS" device=""/>
 <part name="Q2" library="adafruit" deviceset="MOSFET-N" device="WAVE"/>
