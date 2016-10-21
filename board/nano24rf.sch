@@ -367,113 +367,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </deviceset>
 </devicesets>
 </library>
-<library name="microbuilder">
-<description>&lt;h2&gt;&lt;b&gt;microBuilder.eu&lt;/b&gt; Eagle Footprint Library&lt;/h2&gt;
-
-&lt;p&gt;Footprints for common components used in our projects and products.  This is the same library that we use internally, and it is regularly updated.  The newest version can always be found at &lt;b&gt;www.microBuilder.eu&lt;/b&gt;.  If you find this library useful, please feel free to purchase something from our online store. Please also note that all holes are optimised for metric drill bits!&lt;/p&gt;
-
-&lt;h3&gt;Obligatory Warning&lt;/h3&gt;
-&lt;p&gt;While it probably goes without saying, there are no guarantees that the footprints or schematic symbols in this library are flawless, and we make no promises of fitness for production, prototyping or any other purpose. These libraries are provided for information puposes only, and are used at your own discretion.  While we make every effort to produce accurate footprints, and many of the items found in this library have be proven in production, we can't make any promises of suitability for a specific purpose. If you do find any errors, though, please feel free to contact us at www.microbuilder.eu to let us know about it so that we can update the library accordingly!&lt;/p&gt;
-
-&lt;h3&gt;License&lt;/h3&gt;
-&lt;p&gt;This work is placed in the public domain, and may be freely used for commercial and non-commercial work with the following conditions:&lt;/p&gt;
-&lt;p&gt;THIS SOFTWARE IS PROVIDED ''AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE INSTITUTE OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-&lt;/p&gt;</description>
-<packages>
-<package name="1X15_ROUND_70">
-<wire x1="-19.05" y1="0.635" x2="-19.05" y2="-0.635" width="0.2032" layer="51"/>
-<pad name="1" x="-17.78" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="2" x="-15.24" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="3" x="-12.7" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="4" x="-10.16" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="5" x="-7.62" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="6" x="-5.08" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="7" x="-2.54" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="8" x="0" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="9" x="2.54" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="10" x="5.08" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="11" x="7.62" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<pad name="12" x="10.16" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<text x="-19.1262" y="1.8288" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-19.05" y="-3.175" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
-<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
-<rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
-<rectangle x1="-5.334" y1="-0.254" x2="-4.826" y2="0.254" layer="51"/>
-<rectangle x1="-7.874" y1="-0.254" x2="-7.366" y2="0.254" layer="51"/>
-<rectangle x1="-10.414" y1="-0.254" x2="-9.906" y2="0.254" layer="51"/>
-<rectangle x1="-12.954" y1="-0.254" x2="-12.446" y2="0.254" layer="51"/>
-<rectangle x1="-15.494" y1="-0.254" x2="-14.986" y2="0.254" layer="51"/>
-<rectangle x1="-18.034" y1="-0.254" x2="-17.526" y2="0.254" layer="51"/>
-<rectangle x1="4.826" y1="-0.254" x2="5.334" y2="0.254" layer="51"/>
-<rectangle x1="7.366" y1="-0.254" x2="7.874" y2="0.254" layer="51"/>
-<rectangle x1="9.906" y1="-0.254" x2="10.414" y2="0.254" layer="51"/>
-<pad name="13" x="12.7" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<rectangle x1="12.446" y1="-0.254" x2="12.954" y2="0.254" layer="51"/>
-<pad name="14" x="15.24" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<rectangle x1="14.986" y1="-0.254" x2="15.494" y2="0.254" layer="51"/>
-<pad name="15" x="17.78" y="0" drill="1" diameter="1.6764" rot="R90"/>
-<rectangle x1="17.526" y1="-0.254" x2="18.034" y2="0.254" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="PINHD15">
-<wire x1="-6.35" y1="-20.32" x2="1.27" y2="-20.32" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="-20.32" x2="1.27" y2="20.32" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="20.32" x2="-6.35" y2="20.32" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="20.32" x2="-6.35" y2="-20.32" width="0.4064" layer="94"/>
-<text x="-6.35" y="20.955" size="1.778" layer="95">&gt;NAME</text>
-<text x="-6.35" y="-22.86" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="-2.54" y="17.78" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="2" x="-2.54" y="15.24" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="3" x="-2.54" y="12.7" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="4" x="-2.54" y="10.16" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="5" x="-2.54" y="7.62" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="6" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="7" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="8" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="9" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="10" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="11" x="-2.54" y="-7.62" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="12" x="-2.54" y="-10.16" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="13" x="-2.54" y="-12.7" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="14" x="-2.54" y="-15.24" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="15" x="-2.54" y="-17.78" visible="pad" length="short" direction="pas" function="dot"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="HEADER-1X15" prefix="JP" uservalue="yes">
-<description>&lt;b&gt;1x15 Header&lt;/b&gt;</description>
-<gates>
-<gate name="G$1" symbol="PINHD15" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="1X15_ROUND_70">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="10" pad="10"/>
-<connect gate="G$1" pin="11" pad="11"/>
-<connect gate="G$1" pin="12" pad="12"/>
-<connect gate="G$1" pin="13" pad="13"/>
-<connect gate="G$1" pin="14" pad="14"/>
-<connect gate="G$1" pin="15" pad="15"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="6" pad="6"/>
-<connect gate="G$1" pin="7" pad="7"/>
-<connect gate="G$1" pin="8" pad="8"/>
-<connect gate="G$1" pin="9" pad="9"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="dp_devices">
 <description>Dangerous Prototypes Standard PCB sizes
 http://dangerousprototypes.com</description>
@@ -762,6 +655,60 @@ by exp-lbrs.ulp</description>
 <smd name="P$3" x="1.27" y="0" dx="2.032" dy="2.032" layer="1" rot="R180"/>
 <smd name="P$4" x="3.81" y="0" dx="2.032" dy="2.032" layer="1" rot="R180"/>
 </package>
+<package name="1X15_LONG">
+<pad name="P$1" x="-17.78" y="0" drill="0.8" shape="offset" rot="R270"/>
+<pad name="P$2" x="-15.24" y="0" drill="0.8" shape="offset" rot="R270"/>
+<pad name="P$3" x="-12.7" y="0" drill="0.8" shape="offset" rot="R270"/>
+<pad name="P$4" x="-10.16" y="0" drill="0.8" shape="offset" rot="R270"/>
+<pad name="P$5" x="-7.62" y="0" drill="0.8" shape="offset" rot="R270"/>
+<pad name="P$6" x="-5.08" y="0" drill="0.8" shape="offset" rot="R270"/>
+<pad name="P$7" x="-2.54" y="0" drill="0.8" shape="offset" rot="R270"/>
+<pad name="P$8" x="0" y="0" drill="0.8" shape="offset" rot="R270"/>
+<pad name="P$9" x="2.54" y="0" drill="0.8" shape="offset" rot="R270"/>
+<pad name="P$10" x="5.08" y="0" drill="0.8" shape="offset" rot="R270"/>
+<pad name="P$11" x="7.62" y="0" drill="0.8" shape="offset" rot="R270"/>
+<pad name="P$12" x="10.16" y="0" drill="0.8" shape="offset" rot="R270"/>
+<pad name="P$13" x="12.7" y="0" drill="0.8" shape="offset" rot="R270"/>
+<pad name="P$14" x="15.24" y="0" drill="0.8" shape="offset" rot="R270"/>
+<pad name="P$15" x="17.78" y="0" drill="0.8" shape="offset" rot="R270"/>
+<text x="-19.05" y="2.54" size="1.27" layer="21">&gt;NAME</text>
+<text x="12.7" y="-3.81" size="1.27" layer="21">&gt;VALUE</text>
+</package>
+<package name="1X15_ROUND_70">
+<wire x1="-19.05" y1="0.635" x2="-19.05" y2="-0.635" width="0.2032" layer="51"/>
+<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+<rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
+<rectangle x1="-5.334" y1="-0.254" x2="-4.826" y2="0.254" layer="51"/>
+<rectangle x1="-7.874" y1="-0.254" x2="-7.366" y2="0.254" layer="51"/>
+<rectangle x1="-10.414" y1="-0.254" x2="-9.906" y2="0.254" layer="51"/>
+<rectangle x1="-12.954" y1="-0.254" x2="-12.446" y2="0.254" layer="51"/>
+<rectangle x1="-15.494" y1="-0.254" x2="-14.986" y2="0.254" layer="51"/>
+<rectangle x1="-18.034" y1="-0.254" x2="-17.526" y2="0.254" layer="51"/>
+<rectangle x1="4.826" y1="-0.254" x2="5.334" y2="0.254" layer="51"/>
+<rectangle x1="7.366" y1="-0.254" x2="7.874" y2="0.254" layer="51"/>
+<rectangle x1="9.906" y1="-0.254" x2="10.414" y2="0.254" layer="51"/>
+<rectangle x1="12.446" y1="-0.254" x2="12.954" y2="0.254" layer="51"/>
+<rectangle x1="14.986" y1="-0.254" x2="15.494" y2="0.254" layer="51"/>
+<rectangle x1="17.526" y1="-0.254" x2="18.034" y2="0.254" layer="51"/>
+<pad name="1" x="-17.78" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<pad name="2" x="-15.24" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<pad name="3" x="-12.7" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<pad name="4" x="-10.16" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<pad name="5" x="-7.62" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<pad name="6" x="-5.08" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<pad name="7" x="-2.54" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<pad name="8" x="0" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<pad name="9" x="2.54" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<pad name="10" x="5.08" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<pad name="11" x="7.62" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<pad name="12" x="10.16" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<pad name="13" x="12.7" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<pad name="14" x="15.24" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<pad name="15" x="17.78" y="0" drill="1" diameter="1.6764" rot="R90"/>
+<text x="-19.1262" y="1.8288" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
+<text x="-19.05" y="-3.175" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="1X7_CONST">
@@ -814,6 +761,29 @@ by exp-lbrs.ulp</description>
 <pin name="P$2" x="0" y="2.54" visible="pad" length="short" rot="R270"/>
 <pin name="P$3" x="5.08" y="2.54" visible="pad" length="short" rot="R270"/>
 <pin name="P$4" x="10.16" y="2.54" visible="pad" length="short" rot="R270"/>
+</symbol>
+<symbol name="PINHD15">
+<wire x1="-6.35" y1="-20.32" x2="1.27" y2="-20.32" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="-20.32" x2="1.27" y2="20.32" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="20.32" x2="-6.35" y2="20.32" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="20.32" x2="-6.35" y2="-20.32" width="0.4064" layer="94"/>
+<pin name="1" x="-2.54" y="17.78" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="2" x="-2.54" y="15.24" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="3" x="-2.54" y="12.7" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="4" x="-2.54" y="10.16" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="5" x="-2.54" y="7.62" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="6" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="7" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="8" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="9" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="10" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="11" x="-2.54" y="-7.62" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="12" x="-2.54" y="-10.16" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="13" x="-2.54" y="-12.7" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="14" x="-2.54" y="-15.24" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="15" x="-2.54" y="-17.78" visible="pad" length="short" direction="pas" function="dot"/>
+<text x="-6.35" y="20.955" size="1.778" layer="95">&gt;NAME</text>
+<text x="-6.35" y="-22.86" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -903,6 +873,58 @@ by exp-lbrs.ulp</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="HEADER-1X15" prefix="JP" uservalue="yes">
+<description>&lt;b&gt;1x15 Header&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="PINHD15" x="0" y="0"/>
+</gates>
+<devices>
+<device name="RND" package="1X15_ROUND_70">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="11" pad="11"/>
+<connect gate="G$1" pin="12" pad="12"/>
+<connect gate="G$1" pin="13" pad="13"/>
+<connect gate="G$1" pin="14" pad="14"/>
+<connect gate="G$1" pin="15" pad="15"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="LONG" package="1X15_LONG">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="10" pad="P$10"/>
+<connect gate="G$1" pin="11" pad="P$11"/>
+<connect gate="G$1" pin="12" pad="P$12"/>
+<connect gate="G$1" pin="13" pad="P$13"/>
+<connect gate="G$1" pin="14" pad="P$14"/>
+<connect gate="G$1" pin="15" pad="P$15"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+<connect gate="G$1" pin="3" pad="P$3"/>
+<connect gate="G$1" pin="4" pad="P$4"/>
+<connect gate="G$1" pin="5" pad="P$5"/>
+<connect gate="G$1" pin="6" pad="P$6"/>
+<connect gate="G$1" pin="7" pad="P$7"/>
+<connect gate="G$1" pin="8" pad="P$8"/>
+<connect gate="G$1" pin="9" pad="P$9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -919,8 +941,8 @@ by exp-lbrs.ulp</description>
 <part name="D1" library="dp_devices" deviceset="DIODE" device="-DO-214AC"/>
 <part name="U$3" library="ATTAMI-V0.00" deviceset="GND" device=""/>
 <part name="U$5" library="ATTAMI-V0.00" deviceset="GND" device=""/>
-<part name="JP1" library="microbuilder" deviceset="HEADER-1X15" device=""/>
-<part name="JP2" library="microbuilder" deviceset="HEADER-1X15" device=""/>
+<part name="JP1" library="nano24rf" deviceset="HEADER-1X15" device="LONG"/>
+<part name="JP2" library="nano24rf" deviceset="HEADER-1X15" device="LONG"/>
 <part name="JP3" library="nano24rf" deviceset="PINHD-2X3" device="SMT"/>
 <part name="RF24" library="nano24rf" deviceset="1X7-SMDPADS" device=""/>
 <part name="Q2" library="adafruit" deviceset="MOSFET-N" device="WAVE"/>
