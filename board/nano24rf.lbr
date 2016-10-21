@@ -482,6 +482,12 @@ by exp-lbrs.ulp</description>
 <text x="-19.05" y="2.54" size="1.27" layer="21">&gt;NAME</text>
 <text x="12.7" y="-3.81" size="1.27" layer="21">&gt;VALUE</text>
 </package>
+<package name="FATFAD4-LONG">
+<smd name="P$1" x="-3.81" y="0" dx="4.064" dy="2.032" layer="1" rot="R90"/>
+<smd name="P$2" x="-1.27" y="0" dx="4.064" dy="2.032" layer="1" rot="R90"/>
+<smd name="P$3" x="1.27" y="0" dx="4.064" dy="2.032" layer="1" rot="R90"/>
+<smd name="P$4" x="3.81" y="0" dx="4.064" dy="2.032" layer="1" rot="R90"/>
+</package>
 </packages>
 <symbols>
 <symbol name="GND">
@@ -917,7 +923,18 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <gate name="G$1" symbol="1X4PAD" x="-2.54" y="2.54"/>
 </gates>
 <devices>
-<device name="" package="FATPAD4">
+<device name="SEQ" package="FATPAD4">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="P$3" pad="P$3"/>
+<connect gate="G$1" pin="P$4" pad="P$4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="LONG" package="FATFAD4-LONG">
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
