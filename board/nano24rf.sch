@@ -1068,20 +1068,6 @@ VIN</text>
 <label x="81.28" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SDA" class="0">
-<segment>
-<pinref part="JP1" gate="G$1" pin="8"/>
-<label x="25.4" y="48.26" size="1.778" layer="95"/>
-<wire x1="43.18" y1="48.26" x2="22.86" y2="48.26" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="SCL" class="0">
-<segment>
-<pinref part="JP1" gate="G$1" pin="9"/>
-<wire x1="22.86" y1="45.72" x2="43.18" y2="45.72" width="0.1524" layer="91"/>
-<label x="25.4" y="45.72" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="VIN" class="0">
 <segment>
 <pinref part="JP1" gate="G$1" pin="15"/>
