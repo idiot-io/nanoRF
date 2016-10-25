@@ -1183,11 +1183,11 @@ VIN</text>
 <label x="25.4" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D3" class="0">
+<net name="D10" class="0">
 <segment>
-<pinref part="JP2" gate="G$1" pin="10"/>
-<wire x1="68.58" y1="43.18" x2="83.82" y2="43.18" width="0.1524" layer="91"/>
-<label x="81.28" y="43.18" size="1.778" layer="95"/>
+<pinref part="JP2" gate="G$1" pin="3"/>
+<wire x1="68.58" y1="60.96" x2="83.82" y2="60.96" width="0.1524" layer="91"/>
+<label x="81.28" y="60.96" size="1.778" layer="95"/>
 </segment>
 <segment>
 <label x="213.36" y="30.48" size="1.778" layer="95"/>
