@@ -1170,17 +1170,15 @@ VIN</text>
 <pinref part="MOSFET-34" gate="G$1" pin="P$3"/>
 </segment>
 </net>
-<net name="CSK" class="0">
-<segment>
-<pinref part="RF24" gate="G$1" pin="SCK"/>
-<wire x1="109.22" y1="22.86" x2="109.22" y2="25.4" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="SCK" class="0">
 <segment>
 <pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="66.04" x2="22.86" y2="66.04" width="0.1524" layer="91"/>
 <label x="25.4" y="66.04" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="RF24" gate="G$1" pin="SCK"/>
+<wire x1="109.22" y1="22.86" x2="109.22" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D10" class="0">
