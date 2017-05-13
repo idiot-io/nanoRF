@@ -3,12 +3,13 @@
 should look something like this with nano on top, here is rev3, waiting for rev4 board to arrive from elecrow
 ![](http://i.imgur.com/fRQA5Nw.png)
 
+![](https://github.com/shenkarSElab/nano24rf/blob/master/Media/nanorf.jpg?raw=true)  
+
 ##galleries
 [Tshield nano24RF - pcb ver2](https://goo.gl/photos/zeQ4RWo6FQgi1pi57)  
 [Tshield nano24RF - etching](https://goo.gl/photos/ZEXhPJtmmUaZaXrM9)
 
 ##rev4
-![](http://i.imgur.com/bc8OjXh.png)
 
 ![](http://i.imgur.com/1EUWABU.png)
 
