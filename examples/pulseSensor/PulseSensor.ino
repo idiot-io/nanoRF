@@ -21,7 +21,7 @@
  * This software is not intended for medical use.
  */
  
-#include <PulseSensorBPM.h>
+#include "PulseSensorBPM.h"
 
 /*
  * Pinout:
@@ -163,9 +163,9 @@ sei();         // MAKE SURE GLOBAL INTERRUPTS ARE ENABLED
 } 
 
 //Read more: http://pulsesensor.proboards.com/thread/144/using-timer1-timer2-free-pin#ixzz4glL7U0zB
-// THIS IS THE TIMER 2 INTERRUPT SERVICE ROUTINE. 
-// Timer 2 makes sure that we take a reading every 2 miliseconds
-ISR(TIMER1_OVF_vect){                    // triggered when Timer2 counts to 124
+// THIS IS THE TIMER 1 INTERRUPT SERVICE ROUTINE. 
+// Timer 1 makes sure that we take a reading every 2 miliseconds
+ISR(TIMER1_OVF_vect){                    // triggered when Timer1 counts to 124
   cli();                                   // disable interrupts while we do this
   if (pulseDetector.readSensor()) {
     QS = true;
