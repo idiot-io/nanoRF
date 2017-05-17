@@ -2,26 +2,13 @@
  * 15/05/2017 - interrupt changes by zohar mf from shenkar SE lab for the Tshield wearable kit
  * https://github.com/shenkarSElab/nanoRF
  *
- * Based on Joel Murphy and Yury Gitman's Pulse Sensor code, at
- * https://github.com/WorldFamousElectronics/PulseSensor_Amped_Arduino/blob/master/README.md
- *
- * Example Pulse Sensors:
- *   Pulse Sensor Amped (http://www.pulsesensor.com)
- *     available through SparkFun, Adafruit, and others.
- *   Grove Pulse Sensor (TODO)
- *   
- * This code has been tested with the Pulse Sensor Amped
- * and Arduino Uno.
- * 
- * Copyright (c) 2016 Bradford Needham, North Plains, Oregon, USA
- * @bneedhamia, https://www.needhamia.com
- * Licensed under the MIT License, a copy of which
- * should have been included with this software.
- * 
- * This software is not intended for medical use.
+ * Based on Joel Murphy and Yury Gitman's Pulse Sensor code
+ * [see 6431f00  revisions for full License] 
  */
  
 #include "PulseSensorBPM.h"
+
+
 
 /*
  * Pinout:
