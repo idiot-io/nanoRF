@@ -21,7 +21,6 @@ RF24 radio(7,8);
 
 struct dataStruct{
   unsigned long _micros;
-  bool Pulse;
   int BPM;
   int IBI;
 }myData;
@@ -93,7 +92,8 @@ void setup() {
 
 	// PIN_INPUT is set up by the pulseDetector constructor.
 	pinMode(PIN_BLINK, OUTPUT);
-	digitalWrite(PIN_BLINK, LOW);
+	digitalWrite(PIN_BLINK, HIGH);
+	
 	pinMode(PIN_FADE, OUTPUT);
 	fadePWM = 0;
 	analogWrite(PIN_FADE, fadePWM);   // sets PWM duty cycle
@@ -119,19 +119,20 @@ void loop() {
 	
 	if (role == role_ping_out)  
 	{ //sender
-		/*
 		Serial.print('S');
 		Serial.println(pulseDetector.getSignal());
+		/*
 		Serial.print('P');
 		Serial.println(pulseDetector.isPulse());
 		Serial.print('I');
 		Serial.println(pulseDetector.getIBI());
 		*/	
-		Serial.print('B');
-		Serial.println(pulseDetector.getBPM());
 		// If the ISR has seen a beat, print the per-beat information.
-			myData.Pulse = pulseDetector.isPulse();
 		if(QS){
+			Serial.println();
+			Serial.print('B');
+			Serial.println(pulseDetector.getBPM());
+			
 			myData.BPM = pulseDetector.getBPM();
 			//myData.IBI = pulseDetector.getIBI();
 			bool ok = radio.write( &myData, sizeof(myData) );
@@ -140,26 +141,31 @@ void loop() {
 		
 	} 
 	else if ( role == role_pong_back )
-	{ //receiver
-		if ( radio.available()) {
-      // Variable for the received timestamp
-		while (radio.available()) {                          // While there is data ready
-			radio.read( &myData, sizeof(myData) );             // Get the payload
-		}
-			Serial.println(myData.Pulse);
-			// Blink the non-fading LED when the start of a pulse is detected.
-			if (myData.Pulse){ //revise, state might be repeating 1111,00,111,0
-				fadePWM = 255;  // start fading on the start of each beat.
-				analogWrite(PIN_FADE, fadePWM);
+	{ 	//receiver
+
+		unsigned long started_waiting_at = micros();               // Set up a timeout period, get the current microseconds
+		boolean timeout = false;                                   // Set up a variable to indicate if a response was received or not
+		
+		while ( ! radio.available() ){                             // While nothing is received
+			if (micros() - started_waiting_at > 200000 ){            // If waited longer than 200ms, indicate timeout and exit while loop
+				timeout = true;
+				Serial.println("timeout");
 				digitalWrite(PIN_BLINK, LOW);
-			} 
-			else {
-				digitalWrite(PIN_BLINK, HIGH);
+				break;
+			}      
+		}
+	
+		if ( radio.available()) {
+		// Variable for the received timestamp
+			while (radio.available()) {                          // While there is data ready
+				radio.read( &myData, sizeof(myData) );             // Get the payload
+				fadePWM = 255;  // start fading on the start of each beat.
+				//Blink the non-fading LED when the start of a pulse is detected.
+				Serial.print('B');
+				Serial.println(myData.BPM);
+				digitalWrite(PIN_BLINK, HIGH); 
 			}
-			
 			/*
-			Serial.print('B');
-			Serial.println(myData.BPM);
 			Serial.print('Q');
 			Serial.println(myData.IBI);
 			if (myData.BPM>80)
@@ -167,16 +173,15 @@ void loop() {
 			if (myData.BPM<78)
 				LOWbpm();
 			*/
-		}
-	
+		}		
+		/*
 		// Coincidentally, fade the LED a bit.
 		fadePWM -= PWM_STEPS_PER_FADE;
 		if (fadePWM < 0) {
 			fadePWM = 0;
 		}
 		analogWrite(PIN_FADE, fadePWM);
-		
-		
+		*/
 	}
 
 }
