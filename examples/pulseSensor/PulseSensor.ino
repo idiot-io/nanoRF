@@ -21,6 +21,7 @@ RF24 radio(7,8);
 
 struct dataStruct{
   unsigned long _micros;
+  bool Pulse;
   int BPM;
   int IBI;
 }myData;
@@ -118,13 +119,21 @@ void loop() {
 	
 	if (role == role_ping_out)  
 	{ //sender
+		/*
 		Serial.print('S');
 		Serial.println(pulseDetector.getSignal());
-		
+		Serial.print('P');
+		Serial.println(pulseDetector.isPulse());
+		Serial.print('I');
+		Serial.println(pulseDetector.getIBI());
+		*/	
+		Serial.print('B');
+		Serial.println(pulseDetector.getBPM());
 		// If the ISR has seen a beat, print the per-beat information.
+			myData.Pulse = pulseDetector.isPulse();
 		if(QS){
 			myData.BPM = pulseDetector.getBPM();
-			myData.IBI = pulseDetector.getIBI();
+			//myData.IBI = pulseDetector.getIBI();
 			bool ok = radio.write( &myData, sizeof(myData) );
 			QS = false;
 		}
@@ -137,17 +146,27 @@ void loop() {
 		while (radio.available()) {                          // While there is data ready
 			radio.read( &myData, sizeof(myData) );             // Get the payload
 		}
-			fadePWM = 255;  // start fading on the start of each beat.
-			analogWrite(PIN_FADE, fadePWM);
+			Serial.println(myData.Pulse);
+			// Blink the non-fading LED when the start of a pulse is detected.
+			if (myData.Pulse){ //revise, state might be repeating 1111,00,111,0
+				fadePWM = 255;  // start fading on the start of each beat.
+				analogWrite(PIN_FADE, fadePWM);
+				digitalWrite(PIN_BLINK, LOW);
+			} 
+			else {
+				digitalWrite(PIN_BLINK, HIGH);
+			}
 			
+			/*
 			Serial.print('B');
 			Serial.println(myData.BPM);
 			Serial.print('Q');
 			Serial.println(myData.IBI);
 			if (myData.BPM>80)
-			HIGHbpm();
+				HIGHbpm();
 			if (myData.BPM<78)
-			LOWbpm();
+				LOWbpm();
+			*/
 		}
 	
 		// Coincidentally, fade the LED a bit.
@@ -157,12 +176,7 @@ void loop() {
 		}
 		analogWrite(PIN_FADE, fadePWM);
 		
-		// Blink the non-fading LED when the start of a pulse is detected.
-		if (pulseDetector.isPulse()) {
-			digitalWrite(PIN_BLINK, HIGH);
-		} else {
-			digitalWrite(PIN_BLINK, LOW);
-		}
+		
 	}
 
 }
