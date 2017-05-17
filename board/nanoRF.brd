@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.0.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -128,7 +128,7 @@
 <text x="3.2766" y="34.9786" size="0.8128" layer="21" rot="SR90">A2</text>
 <text x="3.2766" y="37.5186" size="0.8128" layer="21" rot="SR90">A1</text>
 <text x="3.2766" y="39.9316" size="0.8128" layer="21" rot="SR90">A0</text>
-<text x="2.794" y="42.0144" size="0.8128" layer="21" rot="R45">GND</text>
+<text x="2.794" y="42.0144" size="0.8128" layer="21" rot="R45">AREF</text>
 <text x="2.4638" y="44.3258" size="0.8128" layer="21" rot="R45">3V3</text>
 <text x="3.3274" y="47.0944" size="0.8128" layer="21" rot="SR90">D13</text>
 <text x="3.1496" y="13.668" size="0.8128" layer="21" rot="SR90">GND</text>
