@@ -27,16 +27,16 @@
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
@@ -54,12 +54,12 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -99,10 +99,10 @@
 </layers>
 <board>
 <plain>
-<wire x1="-1.27" y1="0" x2="19.05" y2="0" width="0" layer="20"/>
-<wire x1="19.05" y1="0" x2="19.05" y2="49.53" width="0" layer="20"/>
-<wire x1="19.05" y1="49.53" x2="-1.27" y2="49.53" width="0" layer="20"/>
-<wire x1="-1.27" y1="49.53" x2="-1.27" y2="0" width="0" layer="20"/>
+<wire x1="-2.54" y1="0" x2="20.32" y2="0" width="0" layer="20"/>
+<wire x1="20.32" y1="0" x2="20.32" y2="49.53" width="0" layer="20"/>
+<wire x1="20.32" y1="49.53" x2="-2.54" y2="49.53" width="0" layer="20"/>
+<wire x1="-2.54" y1="49.53" x2="-2.54" y2="0" width="0" layer="20"/>
 <text x="14.0208" y="11.7884" size="0.8128" layer="21" rot="SR45" align="top-left">TX</text>
 <text x="13.97" y="13.9982" size="0.8128" layer="21" rot="SR45" align="top-left">RX</text>
 <text x="15.24" y="16.1826" size="0.8128" layer="21" rot="SR90">RST\</text>
@@ -46547,8 +46547,8 @@
 <text x="15.6972" y="3.3782" size="1.016" layer="21" rot="R90">V</text>
 <text x="2.667" y="4.3942" size="1.016" layer="21" rot="SR270">V</text>
 <text x="13.335" y="46.99" size="1.778" layer="28" rot="MR0">idiot.io</text>
-<dimension x1="-1.27" y1="49.53" x2="19.05" y2="49.53" x3="8.89" y3="51.435" textsize="1.778" layer="51"/>
-<dimension x1="19.685" y1="49.53" x2="19.685" y2="0" x3="24.13" y3="24.765" textsize="1.778" layer="51"/>
+<dimension x1="-2.54" y1="49.53" x2="20.32" y2="49.53" x3="8.89" y3="50.8" textsize="1.778" layer="51"/>
+<dimension x1="20.32" y1="49.53" x2="20.32" y2="0" x3="26.035" y3="24.765" textsize="1.778" layer="51"/>
 </plain>
 <libraries>
 <library name="dp_devices">
@@ -47023,10 +47023,10 @@ Your Eurocircuits Team
 <contactref element="MOSFET-12" pad="P$4"/>
 <contactref element="RF24" pad="6"/>
 <polygon width="0.2032" layer="1">
-<vertex x="-1.27" y="49.403"/>
-<vertex x="-1.27" y="0"/>
-<vertex x="19.177" y="0"/>
-<vertex x="19.1516" y="49.3776"/>
+<vertex x="-2.54" y="49.53"/>
+<vertex x="-2.54" y="0"/>
+<vertex x="20.955" y="0"/>
+<vertex x="20.32" y="49.53"/>
 </polygon>
 <wire x1="16.51" y1="20.32" x2="9.525" y2="20.32" width="0.2032" layer="1"/>
 <via x="9.525" y="20.32" extent="1-16" drill="0.6"/>
@@ -47195,10 +47195,10 @@ Your Eurocircuits Team
 <wire x1="11.378" y1="33.528" x2="9.017" y2="33.528" width="0.2032" layer="1"/>
 <wire x1="9.017" y1="33.528" x2="8.89" y2="33.401" width="0.2032" layer="1"/>
 <polygon width="0.2032" layer="16">
-<vertex x="-1.27" y="50.292"/>
-<vertex x="-1.27" y="0"/>
-<vertex x="19.177" y="0"/>
-<vertex x="19.2278" y="50.3682"/>
+<vertex x="-2.54" y="49.657"/>
+<vertex x="-2.54" y="0"/>
+<vertex x="21.082" y="0"/>
+<vertex x="20.4978" y="49.7332"/>
 </polygon>
 <wire x1="8.89" y1="33.401" x2="8.89" y2="33.02" width="0.3048" layer="1"/>
 <via x="8.89" y="33.02" extent="1-16" drill="0.6"/>
