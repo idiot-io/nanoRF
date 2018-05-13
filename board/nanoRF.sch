@@ -793,6 +793,52 @@ by exp-lbrs.ulp</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="frames" urn="urn:adsk.eagle:library:229">
+<description>&lt;b&gt;Frames for Sheet and Layout&lt;/b&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="A4L-LOC" urn="urn:adsk.eagle:symbol:13874/1" library_version="1">
+<wire x1="256.54" y1="3.81" x2="256.54" y2="8.89" width="0.1016" layer="94"/>
+<wire x1="256.54" y1="8.89" x2="256.54" y2="13.97" width="0.1016" layer="94"/>
+<wire x1="256.54" y1="13.97" x2="256.54" y2="19.05" width="0.1016" layer="94"/>
+<wire x1="256.54" y1="19.05" x2="256.54" y2="24.13" width="0.1016" layer="94"/>
+<wire x1="161.29" y1="3.81" x2="161.29" y2="24.13" width="0.1016" layer="94"/>
+<wire x1="161.29" y1="24.13" x2="215.265" y2="24.13" width="0.1016" layer="94"/>
+<wire x1="215.265" y1="24.13" x2="256.54" y2="24.13" width="0.1016" layer="94"/>
+<wire x1="246.38" y1="3.81" x2="246.38" y2="8.89" width="0.1016" layer="94"/>
+<wire x1="246.38" y1="8.89" x2="256.54" y2="8.89" width="0.1016" layer="94"/>
+<wire x1="246.38" y1="8.89" x2="215.265" y2="8.89" width="0.1016" layer="94"/>
+<wire x1="215.265" y1="8.89" x2="215.265" y2="3.81" width="0.1016" layer="94"/>
+<wire x1="215.265" y1="8.89" x2="215.265" y2="13.97" width="0.1016" layer="94"/>
+<wire x1="215.265" y1="13.97" x2="256.54" y2="13.97" width="0.1016" layer="94"/>
+<wire x1="215.265" y1="13.97" x2="215.265" y2="19.05" width="0.1016" layer="94"/>
+<wire x1="215.265" y1="19.05" x2="256.54" y2="19.05" width="0.1016" layer="94"/>
+<wire x1="215.265" y1="19.05" x2="215.265" y2="24.13" width="0.1016" layer="94"/>
+<text x="217.17" y="15.24" size="2.54" layer="94">&gt;DRAWING_NAME</text>
+<text x="217.17" y="10.16" size="2.286" layer="94">&gt;LAST_DATE_TIME</text>
+<text x="230.505" y="5.08" size="2.54" layer="94">&gt;SHEET</text>
+<text x="216.916" y="4.953" size="2.54" layer="94">Sheet:</text>
+<frame x1="0" y1="0" x2="260.35" y2="179.07" columns="6" rows="4" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="A4L-LOC" urn="urn:adsk.eagle:component:13926/1" prefix="FRAME" uservalue="yes" library_version="1">
+<description>&lt;b&gt;FRAME&lt;/b&gt;&lt;p&gt;
+DIN A4, landscape with location and doc. field</description>
+<gates>
+<gate name="G$1" symbol="A4L-LOC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -829,6 +875,7 @@ by exp-lbrs.ulp</description>
 <part name="U$10" library="ATTAMI-V0.00" deviceset="GND" device=""/>
 <part name="JP3" library="nano24rf" deviceset="HEADER-1X15" device="LONG"/>
 <part name="JP4" library="nano24rf" deviceset="HEADER-1X15" device="LONG"/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A4L-LOC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -880,25 +927,26 @@ VIN</text>
 <instance part="Q2" gate="G$1" x="157.48" y="63.5"/>
 <instance part="D2" gate="D" x="157.48" y="71.12" rot="R180"/>
 <instance part="U$1" gate="1" x="160.02" y="53.34"/>
-<instance part="Q3" gate="G$1" x="228.6" y="33.02"/>
-<instance part="D3" gate="D" x="228.6" y="40.64" smashed="yes" rot="R180">
-<attribute name="NAME" x="226.06" y="40.1574" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="226.06" y="42.9514" size="1.778" layer="96" rot="R180"/>
+<instance part="Q3" gate="G$1" x="162.56" y="96.52"/>
+<instance part="D3" gate="D" x="162.56" y="104.14" smashed="yes" rot="R180">
+<attribute name="NAME" x="160.02" y="103.6574" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="160.02" y="106.4514" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="U$2" gate="1" x="231.14" y="22.86"/>
-<instance part="Q4" gate="G$1" x="228.6" y="60.96"/>
-<instance part="D4" gate="D" x="228.6" y="68.58" rot="R180"/>
-<instance part="U$4" gate="1" x="231.14" y="50.8"/>
-<instance part="MOSFET-34" gate="G$1" x="269.24" y="43.18" rot="R90"/>
+<instance part="U$2" gate="1" x="165.1" y="86.36"/>
+<instance part="Q4" gate="G$1" x="162.56" y="124.46"/>
+<instance part="D4" gate="D" x="162.56" y="132.08" rot="R180"/>
+<instance part="U$4" gate="1" x="165.1" y="114.3"/>
+<instance part="MOSFET-34" gate="G$1" x="203.2" y="106.68" rot="R90"/>
 <instance part="MOSFET-12" gate="G$1" x="198.12" y="45.72" rot="R90"/>
 <instance part="R4" gate="G$1" x="152.4" y="55.88" rot="R90"/>
 <instance part="R3" gate="G$1" x="152.4" y="27.94" rot="R90"/>
-<instance part="R6" gate="G$1" x="223.52" y="53.34" rot="R90"/>
-<instance part="R5" gate="G$1" x="223.52" y="25.4" rot="R90"/>
-<instance part="U$9" gate="1" x="261.62" y="53.34" rot="R270"/>
+<instance part="R6" gate="G$1" x="157.48" y="116.84" rot="R90"/>
+<instance part="R5" gate="G$1" x="157.48" y="88.9" rot="R90"/>
+<instance part="U$9" gate="1" x="195.58" y="116.84" rot="R270"/>
 <instance part="U$10" gate="1" x="187.96" y="55.88" rot="R270"/>
 <instance part="JP3" gate="G$1" x="76.2" y="48.26" rot="R180"/>
 <instance part="JP4" gate="G$1" x="35.56" y="48.26"/>
+<instance part="FRAME1" gate="G$1" x="2.54" y="-17.78"/>
 </instances>
 <busses>
 </busses>
@@ -944,22 +992,22 @@ VIN</text>
 <segment>
 <pinref part="Q3" gate="G$1" pin="S"/>
 <pinref part="U$2" gate="1" pin="GND"/>
-<wire x1="231.14" y1="25.4" x2="231.14" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="88.9" x2="165.1" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="223.52" y1="20.32" x2="226.06" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="20.32" x2="226.06" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="25.4" x2="231.14" y2="25.4" width="0.1524" layer="91"/>
-<junction x="231.14" y="25.4"/>
+<wire x1="157.48" y1="83.82" x2="160.02" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="83.82" x2="160.02" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="88.9" x2="165.1" y2="88.9" width="0.1524" layer="91"/>
+<junction x="165.1" y="88.9"/>
 </segment>
 <segment>
 <pinref part="Q4" gate="G$1" pin="S"/>
 <pinref part="U$4" gate="1" pin="GND"/>
-<wire x1="231.14" y1="53.34" x2="231.14" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="116.84" x2="165.1" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="223.52" y1="48.26" x2="226.06" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="48.26" x2="226.06" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="53.34" x2="231.14" y2="53.34" width="0.1524" layer="91"/>
-<junction x="231.14" y="53.34"/>
+<wire x1="157.48" y1="111.76" x2="160.02" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="111.76" x2="160.02" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="116.84" x2="165.1" y2="116.84" width="0.1524" layer="91"/>
+<junction x="165.1" y="116.84"/>
 </segment>
 <segment>
 <pinref part="U$10" gate="1" pin="GND"/>
@@ -973,7 +1021,7 @@ VIN</text>
 <segment>
 <pinref part="U$9" gate="1" pin="GND"/>
 <pinref part="MOSFET-34" gate="G$1" pin="P$4"/>
-<wire x1="264.16" y1="53.34" x2="266.7" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="116.84" x2="200.66" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FET01" class="0">
@@ -1120,19 +1168,19 @@ VIN</text>
 <label x="147.32" y="43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="266.7" y1="43.18" x2="246.38" y2="43.18" width="0.1524" layer="91"/>
-<label x="243.84" y="43.18" size="1.778" layer="95"/>
+<wire x1="200.66" y1="106.68" x2="180.34" y2="106.68" width="0.1524" layer="91"/>
+<label x="177.8" y="106.68" size="1.778" layer="95"/>
 <pinref part="MOSFET-34" gate="G$1" pin="P$2"/>
 </segment>
 <segment>
 <pinref part="D4" gate="D" pin="C"/>
-<wire x1="218.44" y1="68.58" x2="226.06" y2="68.58" width="0.1524" layer="91"/>
-<label x="218.44" y="68.58" size="1.778" layer="95"/>
+<wire x1="152.4" y1="132.08" x2="160.02" y2="132.08" width="0.1524" layer="91"/>
+<label x="152.4" y="132.08" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="D3" gate="D" pin="C"/>
-<wire x1="226.06" y1="40.64" x2="218.44" y2="40.64" width="0.1524" layer="91"/>
-<label x="218.44" y="40.64" size="1.778" layer="95"/>
+<wire x1="160.02" y1="104.14" x2="152.4" y2="104.14" width="0.1524" layer="91"/>
+<label x="152.4" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D9" class="0">
@@ -1145,12 +1193,12 @@ VIN</text>
 <junction x="78.74" y="58.42"/>
 </segment>
 <segment>
-<label x="213.36" y="58.42" size="1.778" layer="95"/>
+<label x="147.32" y="121.92" size="1.778" layer="95"/>
 <pinref part="Q4" gate="G$1" pin="G"/>
-<wire x1="223.52" y1="58.42" x2="226.06" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="121.92" x2="160.02" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="223.52" y1="58.42" x2="215.9" y2="58.42" width="0.1524" layer="91"/>
-<junction x="223.52" y="58.42"/>
+<wire x1="157.48" y1="121.92" x2="149.86" y2="121.92" width="0.1524" layer="91"/>
+<junction x="157.48" y="121.92"/>
 </segment>
 </net>
 <net name="FET02" class="0">
@@ -1170,26 +1218,26 @@ VIN</text>
 <segment>
 <pinref part="Q3" gate="G$1" pin="D"/>
 <pinref part="D3" gate="D" pin="A"/>
-<wire x1="231.14" y1="38.1" x2="231.14" y2="40.64" width="0.1524" layer="91"/>
-<junction x="231.14" y="40.64"/>
-<wire x1="266.7" y1="38.1" x2="243.84" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="243.84" y1="38.1" x2="243.84" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="243.84" y1="40.64" x2="231.14" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="101.6" x2="165.1" y2="104.14" width="0.1524" layer="91"/>
+<junction x="165.1" y="104.14"/>
+<wire x1="200.66" y1="101.6" x2="177.8" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="101.6" x2="177.8" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="104.14" x2="165.1" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="MOSFET-34" gate="G$1" pin="P$1"/>
-<label x="251.46" y="38.1" size="1.778" layer="95"/>
+<label x="185.42" y="101.6" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="FET04" class="0">
 <segment>
 <pinref part="Q4" gate="G$1" pin="D"/>
 <pinref part="D4" gate="D" pin="A"/>
-<wire x1="231.14" y1="66.04" x2="231.14" y2="68.58" width="0.1524" layer="91"/>
-<junction x="231.14" y="68.58"/>
-<wire x1="246.38" y1="68.58" x2="231.14" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="266.7" y1="48.26" x2="246.38" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="246.38" y1="48.26" x2="246.38" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="129.54" x2="165.1" y2="132.08" width="0.1524" layer="91"/>
+<junction x="165.1" y="132.08"/>
+<wire x1="180.34" y1="132.08" x2="165.1" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="111.76" x2="180.34" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="111.76" x2="180.34" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="MOSFET-34" gate="G$1" pin="P$3"/>
-<label x="251.46" y="48.26" size="1.778" layer="95"/>
+<label x="185.42" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -1216,12 +1264,12 @@ VIN</text>
 <junction x="78.74" y="60.96"/>
 </segment>
 <segment>
-<label x="213.36" y="30.48" size="1.778" layer="95"/>
+<label x="147.32" y="93.98" size="1.778" layer="95"/>
 <pinref part="Q3" gate="G$1" pin="G"/>
-<wire x1="223.52" y1="30.48" x2="226.06" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="93.98" x2="160.02" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="215.9" y1="30.48" x2="223.52" y2="30.48" width="0.1524" layer="91"/>
-<junction x="223.52" y="30.48"/>
+<wire x1="149.86" y1="93.98" x2="157.48" y2="93.98" width="0.1524" layer="91"/>
+<junction x="157.48" y="93.98"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -1381,6 +1429,16 @@ VIN</text>
 <note version="6.3" minversion="6.2.2" severity="warning">
 Since Version 6.2.2 text objects can contain more than one line,
 which will not be processed correctly with this version.
+</note>
+<note version="8.2" severity="warning">
+Since Version 8.2, EAGLE supports online libraries. The ids
+of those online libraries will not be understood (or retained)
+with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
