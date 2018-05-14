@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="1" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -24,10 +24,10 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
@@ -46,7 +46,7 @@
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
@@ -54,7 +54,7 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
@@ -46550,6 +46550,10 @@
 <dimension x1="-2.54" y1="49.53" x2="20.32" y2="49.53" x3="8.89" y3="50.8" textsize="1.778" layer="51"/>
 <dimension x1="20.32" y1="49.53" x2="20.32" y2="0" x3="26.035" y3="24.765" textsize="1.778" layer="51"/>
 <text x="13.2842" y="48.133" size="1.016" layer="21" rot="R180">v1.5</text>
+<wire x1="-1.27" y1="49.53" x2="19.05" y2="49.53" width="0.1524" layer="46"/>
+<wire x1="19.05" y1="49.53" x2="19.05" y2="0" width="0.1524" layer="46"/>
+<wire x1="19.05" y1="0" x2="-1.27" y2="0" width="0.1524" layer="46"/>
+<wire x1="-1.27" y1="0" x2="-1.27" y2="49.53" width="0.1524" layer="46"/>
 </plain>
 <libraries>
 <library name="dp_devices">
@@ -46994,8 +46998,8 @@ Your Eurocircuits Team
 <element name="R5" library="ATTAMI-V0.00" package="0805" value="" x="11.43" y="46.101" smashed="yes">
 <attribute name="VALUE" x="10.414" y="44.704" size="0.4064" layer="27"/>
 </element>
-<element name="R6" library="ATTAMI-V0.00" package="0805" value="" x="6.35" y="46.101" smashed="yes">
-<attribute name="VALUE" x="5.334" y="44.704" size="0.4064" layer="27"/>
+<element name="R6" library="ATTAMI-V0.00" package="0805" value="" x="6.35" y="45.974" smashed="yes">
+<attribute name="VALUE" x="5.334" y="44.577" size="0.4064" layer="27"/>
 </element>
 <element name="MOSFET-34" library="nano24rf" package="FATFAD4-LONG" value="FATPAD4LONG" x="18.1102" y="5.1816" smashed="yes" rot="R90"/>
 <element name="RF24" library="nano24rf" package="SMD1,27-2,54" value="1X7-SMDPADS" x="2.794" y="11.303" smashed="yes">
@@ -47024,10 +47028,10 @@ Your Eurocircuits Team
 <contactref element="MOSFET-12" pad="P$4"/>
 <contactref element="RF24" pad="6"/>
 <polygon width="0.2032" layer="1">
-<vertex x="-2.54" y="49.53"/>
-<vertex x="-2.54" y="0"/>
-<vertex x="20.955" y="0"/>
-<vertex x="20.32" y="49.53"/>
+<vertex x="1.27" y="49.53"/>
+<vertex x="1.27" y="0"/>
+<vertex x="16.51" y="0"/>
+<vertex x="16.51" y="49.53"/>
 </polygon>
 <wire x1="16.51" y1="20.32" x2="9.525" y2="20.32" width="0.2032" layer="1"/>
 <via x="9.525" y="20.32" extent="1-16" drill="0.6"/>
@@ -47043,6 +47047,7 @@ Your Eurocircuits Team
 <contactref element="JP4" pad="P$14"/>
 <wire x1="-1.27" y1="15.24" x2="1.27" y2="15.24" width="1.016" layer="16"/>
 <contactref element="MOSFET-34" pad="P$4"/>
+<wire x1="16.51" y1="20.32" x2="19.05" y2="20.32" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="FET01">
 <contactref element="Q1" pad="3"/>
@@ -47196,10 +47201,10 @@ Your Eurocircuits Team
 <wire x1="11.378" y1="33.528" x2="9.017" y2="33.528" width="0.2032" layer="1"/>
 <wire x1="9.017" y1="33.528" x2="8.89" y2="33.401" width="0.2032" layer="1"/>
 <polygon width="0.2032" layer="16">
-<vertex x="-2.54" y="49.657"/>
-<vertex x="-2.54" y="0"/>
-<vertex x="21.082" y="0"/>
-<vertex x="20.4978" y="49.7332"/>
+<vertex x="1.27" y="49.657"/>
+<vertex x="1.27" y="0"/>
+<vertex x="16.51" y="0"/>
+<vertex x="16.51" y="49.53"/>
 </polygon>
 <wire x1="8.89" y1="33.401" x2="8.89" y2="33.02" width="0.3048" layer="1"/>
 <via x="8.89" y="33.02" extent="1-16" drill="0.6"/>
@@ -47222,7 +47227,7 @@ Your Eurocircuits Team
 <contactref element="Q4" pad="1"/>
 <contactref element="R6" pad="2"/>
 <wire x1="7.45" y1="43.718" x2="7.45" y2="46.028" width="0.2032" layer="1"/>
-<wire x1="7.45" y1="46.028" x2="7.25" y2="46.101" width="0.2032" layer="1" curve="90"/>
+<wire x1="7.45" y1="46.028" x2="7.25" y2="45.974" width="0.2032" layer="1" curve="90"/>
 <wire x1="16.51" y1="40.64" x2="14.859" y2="40.64" width="0.2032" layer="16"/>
 <wire x1="14.859" y1="40.64" x2="13.208" y2="42.291" width="0.2032" layer="16"/>
 <wire x1="13.208" y1="42.291" x2="9.525" y2="42.291" width="0.2032" layer="16"/>

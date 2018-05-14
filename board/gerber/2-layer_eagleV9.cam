@@ -1,12 +1,12 @@
 {
     "author": {
-        "email": "support.eagle@autodesk.com",
-        "name": "Autodesk EAGLE"
+        "email": "yair99@gmail.com",
+        "name": "Yair Reshef"
     },
     "description": {
         "EN": "EAGLE default 2 layer CAM job."
     },
-    "output_type": "zip",
+    "output_type": "directory",
     "outputs": [
         {
             "format_specifier": {
@@ -77,15 +77,16 @@
                     "type": "gerber_layer"
                 },
                 {
-                    "board_outline": true,
+                    "board_outline": false,
                     "config": {
                         "file_function": "Profile",
                         "plating": "non-plated"
                     },
                     "filename_format": "%PREFIX/profile.gbr",
                     "layers": [
+                        20
                     ],
-                    "milling": true,
+                    "milling": false,
                     "polarity": "positive",
                     "type": "gerber_layer"
                 },
@@ -176,11 +177,32 @@
                     "filename_format": "%PREFIX/silkscreen_bottom.gbr",
                     "layers": [
                         22,
-                        26,
-                        28
+                        26
                     ],
                     "milling": false,
                     "name": "Silkscreen Bottom",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "file_function": "Profile",
+                        "plating": "plated"
+                    },
+                    "filename_format": "%PREFIX/%FF_castellation.gbr",
+                    "layers": [
+                        46
+                    ],
+                    "milling": false,
+                    "name": "Profile_castellation",
                     "polarity": "positive",
                     "type": "gerber_layer"
                 }
@@ -188,7 +210,7 @@
             "version": "X2"
         }
     ],
-    "timestamp": "2018-01-17T13:57:10",
+    "timestamp": "2018-05-14T15:46:12",
     "type": "EAGLE CAM job",
     "units": "metric",
     "version": "8.6.1"
