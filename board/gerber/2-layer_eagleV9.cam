@@ -48,7 +48,7 @@
                         "layer_details": "mixed",
                         "layer_type": "top"
                     },
-                    "filename_format": "%PREFIX/copper_top.gbr",
+                    "filename_format": "%PREFIX/copper_top.GTL",
                     "layers": [
                         1,
                         18,
@@ -66,7 +66,7 @@
                         "layer_details": "mixed",
                         "layer_type": "bottom"
                     },
-                    "filename_format": "%PREFIX/copper_bottom.gbr",
+                    "filename_format": "%PREFIX/copper_bottom.GBL",
                     "layers": [
                         16,
                         17,
@@ -82,7 +82,7 @@
                         "file_function": "Profile",
                         "plating": "non-plated"
                     },
-                    "filename_format": "%PREFIX/profile.gbr",
+                    "filename_format": "%PREFIX/profile.GML",
                     "layers": [
                         20
                     ],
@@ -97,7 +97,7 @@
                         "index": 1,
                         "layer_type": "top"
                     },
-                    "filename_format": "%PREFIX/soldermask_top.gbr",
+                    "filename_format": "%PREFIX/soldermask_top.GTS",
                     "layers": [
                         29
                     ],
@@ -112,7 +112,7 @@
                         "index": 1,
                         "layer_type": "bottom"
                     },
-                    "filename_format": "%PREFIX/soldermask_bottom.gbr",
+                    "filename_format": "%PREFIX/soldermask_bottom.GBS",
                     "layers": [
                         30
                     ],
@@ -126,7 +126,7 @@
                         "file_function": "Paste",
                         "layer_type": "top"
                     },
-                    "filename_format": "%PREFIX/solderpaste_top.gbr",
+                    "filename_format": "%PREFIX/solderpaste_top.GTS",
                     "layers": [
                         31
                     ],
@@ -141,7 +141,7 @@
                         "file_function": "Paste",
                         "layer_type": "bottom"
                     },
-                    "filename_format": "%PREFIX/solderpaste_bottom.gbr",
+                    "filename_format": "%PREFIX/solderpaste_bottom.GBS",
                     "layers": [
                         32
                     ],
@@ -157,7 +157,7 @@
                         "index": 1,
                         "layer_type": "top"
                     },
-                    "filename_format": "%PREFIX/silkscreen_top.gbr",
+                    "filename_format": "%PREFIX/silkscreen_top.GTO",
                     "layers": [
                         21,
                         25
@@ -174,10 +174,11 @@
                         "index": 1,
                         "layer_type": "bottom"
                     },
-                    "filename_format": "%PREFIX/silkscreen_bottom.gbr",
+                    "filename_format": "%PREFIX/silkscreen_bottom.GBO",
                     "layers": [
                         22,
-                        26
+                        26,
+                        28
                     ],
                     "milling": false,
                     "name": "Silkscreen Bottom",
@@ -197,7 +198,7 @@
                         "file_function": "Profile",
                         "plating": "plated"
                     },
-                    "filename_format": "%PREFIX/%FF_castellation.gbr",
+                    "filename_format": "%PREFIX/%FF_castellation.GML1",
                     "layers": [
                         46
                     ],
@@ -207,10 +208,10 @@
                     "type": "gerber_layer"
                 }
             ],
-            "version": "X2"
+            "version": "RS274X"
         }
     ],
-    "timestamp": "2018-05-14T15:46:12",
+    "timestamp": "2018-05-16T16:19:43",
     "type": "EAGLE CAM job",
     "units": "metric",
     "version": "8.6.1"
