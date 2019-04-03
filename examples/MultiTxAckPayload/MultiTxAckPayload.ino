@@ -14,13 +14,13 @@
 // adapted to https://github.com/idiot-io/nanoRF
 //
 
+#include "switchPin.h"
 #define DEBUG 0
 
-#define FLASH_PIN 2
-#define FLASH_GND_PIN 3
+#define FLASH_PIN 4
+#define FLASH_GND_PIN 5
 
-#define TRIG_PIN 4
-#define GND_PIN 5 //also mosfet
+#define TRIG_PIN 2
 
 #include <SPI.h>
 #include "nRF24L01.h"
@@ -39,18 +39,16 @@ RF24 radio(CE_PIN, CSN_PIN); // Create a Radio
 char dataToSend[1] = "e";
 
 //===============
-int lastTrigState, trigState;
+bool state;
 
 void setup() {
+  attachInterrupt(digitalPinToInterrupt(TRIG_PIN), blink, RISING);
+
   pinMode(FLASH_PIN, OUTPUT);
   digitalWrite(FLASH_PIN, LOW);
   pinMode(FLASH_GND_PIN, OUTPUT);
   digitalWrite(FLASH_GND_PIN, LOW);
-
-  pinMode(TRIG_PIN, INPUT);
-  digitalWrite(TRIG_PIN, HIGH);
-  pinMode(GND_PIN, OUTPUT);
-  digitalWrite(GND_PIN, LOW);
+  pinMode(LED_BUILTIN, OUTPUT);
 
   radio.begin();
   delay(50);
@@ -58,42 +56,23 @@ void setup() {
   // open the writing pipe with the address of a slave
   radio.openWritingPipe(slaveAddress[0]);
 
+  switchOn<LED_BUILTIN>();
 }
 
 //=============
-
+int micro;
 void loop() {
-
-  trigState = digitalRead(TRIG_PIN);
-  //detect falling edge
-  if (trigState != lastTrigState) {
-    if (trigState == LOW) {
-
-      //PORTD |= B11111011;
-
-      digitalWrite(FLASH_PIN, HIGH);
-      rad
-  PORTD |= B11111011;
-  delayMicroseconds(20);
-  PORTD &= B00000100;
-  delayMicroseconds(20);
-  PORTD |= B11111011;
-  delayMicroseconds(20);
-  PORTD &= B00000100;
-  delayMicroseconds(20);
-  PORTD |= B11111011;
-  delayMicroseconds(20);
-  PORTD &= B00000100;
-  delayMicroseconds(20);
-  PORTD |= B11111011;
-  delayMicroseconds(20);
-  PORTD &= B00000100;
-  delayMicroseconds(20);io.write( &dataToSend, sizeof(dataToSend) );
-      //delayMicroseconds(20);
-      digitalWrite(FLASH_PIN, LOW);
-      //PORTD &= B00000100;
-      delayMicroseconds(20);
-    }
-    lastTrigState = trigState;
+ 
+}
+void flashOut() {
+  if (state) {
+    switchOn<FLASH_PIN>();
+    radio.write( &dataToSend, sizeof(dataToSend) );
+    switchOff<FLASH_PIN>();
+    state = 0;
   }
+}
+
+void blink() {
+  state = 1;
 }

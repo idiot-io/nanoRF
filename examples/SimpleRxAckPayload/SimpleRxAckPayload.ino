@@ -2,6 +2,9 @@
 
 // SimpleRxAckPayload- the slave or the receiver
 
+#include "switchPin.h"
+//https://github.com/fredlllll/FredUtil-Arduino/blob/master/fredOptimization.h
+
 #define FLASH_PIN 4
 #define GND_PIN 5 //also mosfet
 
@@ -24,7 +27,7 @@ void setup() {
   pinMode(FLASH_PIN, OUTPUT);
   pinMode(GND_PIN, OUTPUT);
   digitalWrite(GND_PIN, LOW);
-
+  pinMode(LED_BUILTIN, OUTPUT);
   radio.begin();
 
   radio.setAutoAck(0);
@@ -37,9 +40,13 @@ void setup() {
 //==========
 
 void loop() {
+
   if ( radio.available() ) {
-    digitalWrite(FLASH_PIN, HIGH);
+    switchOn<LED_BUILTIN>();
+    switchOn<FLASH_PIN>();
     radio.read( &dataReceived, sizeof(dataReceived) );
-    digitalWrite(FLASH_PIN, LOW);
+    switchOff<FLASH_PIN>();
+    switchOn<LED_BUILTIN>();
+
   }
 }
