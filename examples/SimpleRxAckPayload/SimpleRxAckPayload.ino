@@ -24,10 +24,12 @@ char dataReceived[1]; // this must match dataToSend in the TX
 //==============
 #define DEBUG 0
 void setup() {
+  Serial.begin(115200);
+  Serial.println("RX...");
+
   pinMode(FLASH_PIN, OUTPUT);
   pinMode(GND_PIN, OUTPUT);
   digitalWrite(GND_PIN, LOW);
-  pinMode(LED_BUILTIN, OUTPUT);
   radio.begin();
 
   radio.setAutoAck(0);
@@ -42,11 +44,10 @@ void setup() {
 void loop() {
 
   if ( radio.available() ) {
-    switchOn<LED_BUILTIN>();
+    Serial.println("got");
+
     switchOn<FLASH_PIN>();
     radio.read( &dataReceived, sizeof(dataReceived) );
     switchOff<FLASH_PIN>();
-    switchOn<LED_BUILTIN>();
-
   }
 }

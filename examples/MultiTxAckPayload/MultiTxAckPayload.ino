@@ -42,27 +42,33 @@ char dataToSend[1] = "e";
 bool state;
 
 void setup() {
-  attachInterrupt(digitalPinToInterrupt(TRIG_PIN), blink, RISING);
+  
+  Serial.begin(115200);
+  Serial.println("TX...");
+  //attachInterrupt(digitalPinToInterrupt(TRIG_PIN), blink, RISING);
 
   pinMode(FLASH_PIN, OUTPUT);
   digitalWrite(FLASH_PIN, LOW);
   pinMode(FLASH_GND_PIN, OUTPUT);
   digitalWrite(FLASH_GND_PIN, LOW);
-  pinMode(LED_BUILTIN, OUTPUT);
-
+  
   radio.begin();
   delay(50);
 
   // open the writing pipe with the address of a slave
   radio.openWritingPipe(slaveAddress[0]);
 
-  switchOn<LED_BUILTIN>();
 }
 
 //=============
 int micro;
 void loop() {
- 
+     switchOn<FLASH_PIN>();
+    //radio.write( &dataToSend, sizeof(dataToSend) );
+    //delayMicroseconds(1000);
+    delay(1);
+    switchOff<FLASH_PIN>();
+    delay(32);
 }
 void flashOut() {
   if (state) {
