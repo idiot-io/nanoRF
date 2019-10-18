@@ -13,14 +13,6 @@
 #include <SPI.h>
 //#include <printf.h>
 
-int PWRLed = 2;    // Digital Pin  2
-int ThermOut = 6;    // Mosfet Output
-
-int Gpin = 3;    // Digital Pin  3
-int Hpin = 4;    // Digital Pin  4
-int Epin = 9;    // Digital Pin  9
-int Fpin = 10;    // Digital Pin  10
-
 
 /**** Configure the nrf24l01 CE and CS pins ****/
 RF24 radio(7, 8);
@@ -47,24 +39,11 @@ struct payload_t {
 };
 
 struct dataStruct {
-  int A, B, C, D, E, F, G, H, T, LvibMSG; // 8 Electrodes Values
+  int Aa, Ba, Ca, Da, LvibMSG; // 4 Electrodes Values
 } myData;
 
 void setup() {
-  pinMode(Epin, INPUT_PULLUP);
-  digitalWrite(Epin, HIGH);
-  pinMode(Fpin, INPUT_PULLUP);
-  digitalWrite(Fpin, HIGH);
-  pinMode(Gpin, INPUT_PULLUP);
-  digitalWrite(Gpin, HIGH);
-  pinMode(Hpin, INPUT_PULLUP);
-  digitalWrite(Hpin, HIGH);
 
-  pinMode(PWRLed, OUTPUT);
-  digitalWrite(PWRLed, HIGH);
-
-  pinMode(ThermOut, OUTPUT);
-  digitalWrite(ThermOut, LOW);
 
   Serial.begin(115200);
   //printf_begin();
@@ -82,29 +61,15 @@ void loop() {
   // Send to the master node every second
   if (millis() - displayTimer >= 100) {
     displayTimer = millis();
-    myData.A = map(analogRead(A0), 1023, 0, 0, 1023);// LickoDuino Electrode1
-    myData.B = map(analogRead(A1), 1023, 0, 0, 1023);// LickoDuino Electrode2
-    myData.C = map(analogRead(A2), 1023, 0, 0, 1023);// LickoDuino Electrode3
-    myData.D = map(analogRead(A3), 1023, 0, 0, 1023);// LickoDuino Electrode4
+	
+    myData.Aa = map(analogRead(A0), 1023, 0, 0, 1023);// LickoDuino Electrode1
+    myData.Ba = map(analogRead(A1), 1023, 0, 0, 1023);// LickoDuino Electrode2
+    myData.Ca = map(analogRead(A2), 1023, 0, 0, 1023);// LickoDuino Electrode3
+    myData.Da = map(analogRead(A3), 1023, 0, 0, 1023);// LickoDuino Electrode4
    
-    // Rupture Electrode1
-    int E = digitalRead(Epin);
-    if (E == HIGH) {myData.E = 0;} else {myData.E = 255;}
-    // Rupture Electrode2
-    int F = digitalRead(Fpin);
-    if (F == HIGH) { myData.F = 0; }else {myData.F = 255;}
-     // Rupture Electrode3
-    int G = digitalRead(Gpin);
-    if (G == HIGH) { myData1.G = 0;} else { myData1.G = 255; }
-      // Rupture Electrode4
-    int H = digitalRead(Hpin);
-    if (H == HIGH) { myData.H = 0;} else {  myData.H = 255; }
-
-    myData.T = map(analogRead(A5), 0, 1023, 0, 255);// Thermostat Pot
-    analogWrite(ThermOut,  myData.T);
     
     if (myData.A > 600) {
-    myData1.LvibMSG = 1;
+    myData.LvibMSG = 1;
     }
     else  {
       myData.LvibMSG = 0;
@@ -127,16 +92,11 @@ void loop() {
       }
     } else {
       Serial.print("Send OK: "); Serial.println(displayTimer);
-      Serial.print( myData.A); Serial.print(",");
-      Serial.print( myData.B); Serial.print(",");
-      Serial.print( myData.C); Serial.print(",");
-      Serial.print( myData.D); Serial.print(",");
-      Serial.print( myData.E); Serial.print(",");
-      Serial.print( myData.F); Serial.print(",");
-      Serial.print( myData.G); Serial.print(",");
-      Serial.print( myData.H); Serial.print(",");
-      Serial.print( myData.T); Serial.print(",");
-      Serial.println( myData1.LvibMSG);
+      Serial.print( myData.Aa); Serial.print(",");
+      Serial.print( myData.Ba); Serial.print(",");
+      Serial.print( myData.Ca); Serial.print(",");
+      Serial.print( myData.Da); Serial.print(",");
+      Serial.println( myData.LvibMSG);
     }
   }
 

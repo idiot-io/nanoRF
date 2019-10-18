@@ -12,7 +12,6 @@
 #include "RF24Mesh.h"
 #include <SPI.h>
 
-int PWRLed = 2;    // Digital Pin  2
 int Lvib = 9;    // Digital Pin  9
 int LvibMSG = 0;
 
@@ -40,14 +39,12 @@ struct payload_t {
 };
 
 struct dataStruct {
-  int A, B, C, D, E, F, LvibMSG; // 8 Electrodes Values
+  int A, B, C, D, E, F, LvibMSG; // 6 Electrodes Values
 } myData;
 
 void setup() {
   pinMode(Lvib, OUTPUT);
   digitalWrite(Lvib, LOW);
-  pinMode(PWRLed, OUTPUT);
-  digitalWrite(PWRLed, HIGH);
   Serial.begin(115200);
   //printf_begin();
   // Set the nodeID manually
@@ -73,7 +70,7 @@ void loop() {
     myData.E = map(analogRead(A4), 1023, 0, 0, 1023);
     myData.F = map(analogRead(A5), 1023, 0, 0, 1023);
 
-    if ((myData1.A > 600) || ( myData1.LvibMSG > 0)) {
+    if ((myData.A > 600) || ( myData.LvibMSG != 0)) {
       digitalWrite(Lvib, HIGH);
     } else {
       digitalWrite(Lvib, LOW);

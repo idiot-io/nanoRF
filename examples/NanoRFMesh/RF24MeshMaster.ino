@@ -24,6 +24,7 @@
 RF24 radio(7, 8);
 RF24Network network(radio);
 RF24Mesh mesh(radio, network);
+
 struct payload_t {
   unsigned long ms;
   unsigned long counter;
@@ -33,7 +34,8 @@ struct payload_t {
 uint32_t displayTimer = 0;
 
 struct dataStruct {
-  int A, B, C, D, E, F, G, H, T, LvibMSG; // 8 Electrodes ,Thermostat - v2.0
+  int A, B, C, D, LvibMSG; // 4 pots  Node01
+  int Aa, Ba, Ca, Da; // 4 pots Node02
 } myData;
 
 
@@ -86,6 +88,7 @@ void loop() {
       Serial.print( myData.A); Serial.print(",");
       Serial.print( myData.B); Serial.print(",");
       Serial.print( myData.C); Serial.print(",");
+	  Serial.print( myData.D); Serial.print(",");
       Serial.println( myData.LvibMSG);//.....  
    }
     Serial.println(F("**********************************"));    
