@@ -1,9 +1,7 @@
-/** RF24Mesh_Example.ino by TMRh20
-
-   This example sketch shows how to manually configure a node via RF24Mesh, and send data to the
-   master node.
-   The nodes will refresh their network address as soon as a single write fails. This allows the
-   nodes to change position in relation to each other and the master node.
+/**
+  nanorf sensor mesh -   agent
+  https://github.com/idiot-io/nanoRF
+  based on RF24Mesh_Example_Master.ino by TMRh20
 */
 
 
@@ -18,28 +16,18 @@ RF24 radio(10, 9);//NanoRF (7,8)
 RF24Network network(radio);
 RF24Mesh mesh(radio, network);
 
-/**
-   User Configuration: nodeID - A unique identifier for each radio. Allows addressing
-   to change dynamically with physical changes to the mesh.
-
-   In this example, configuration takes place below, prior to uploading the sketch to the device
-   A unique value from 1-255 must be configured for each node.
-   This will be stored in EEPROM on AVR devices, so remains persistent between further uploads, loss of power, etc.
-
- **/
-#define nodeID 2
+#define nodeID 1//SYSTEM V2.5
 
 
 uint32_t displayTimer = 0;
-
-struct payload_t {
-  unsigned long ms;
-  unsigned long counter;
-};
+uint32_t ctr = 0;
 
 struct dataStruct {
-  int vA2, vB2, vC2, LvibMSG; // 8 Electrodes Values
-} myData;
+  int vA1, vB1, vC1; //Node01
+  int vA2, vB2, vC2, LvibMSG;//Node2
+};
+struct dataStruct myData ; //unified data set
+struct dataStruct tmpData ; //what came from a node.
 
 void setup() {
 
@@ -56,6 +44,27 @@ void loop() {
 
   mesh.update();
 
+  ////////////
+  // Check for incoming data from the sensors
+  ////////////
+  if (network.available()) {
+    RF24NetworkHeader header;
+    network.peek(header);
+
+    switch (header.type) {
+      // Display the incoming millis() values from the sensor nodes
+      case 'M':
+        network.read(header, &tmpData, sizeof(tmpData));
+        //update what we dont produce on this node
+        tmpData.vA1 = myData.vA1;
+        tmpData.vB1 = myData.vB1;
+        tmpData.vC1 = myData.vC1;
+        break;
+    }
+  }
+
+
+  //////////////////
   // Send to the master node every second
   if (millis() - displayTimer >= 100) {
     displayTimer = millis();
@@ -75,11 +84,8 @@ void loop() {
 
       // If a write fails, check connectivity to the mesh network
       if ( ! mesh.checkConnection() ) {
-        //refresh the network address
         Serial.println("Renewing Address");
         if (!mesh.renewAddress()) {
-          //If address renewal fails, reconfigure the radio and restart the mesh
-          //This allows recovery from most if not all radio errors
           mesh.begin();
         }
       } else {
@@ -92,16 +98,6 @@ void loop() {
       Serial.print( myData.vC2); Serial.print(",");
       Serial.println( myData.LvibMSG);
     }
-  }
-
-  while (network.available()) {
-    RF24NetworkHeader header;
-    payload_t payload;
-    network.read(header, &payload, sizeof(payload));
-    Serial.print("Received packet #");
-    Serial.print(payload.counter);
-    Serial.print(" at ");
-    Serial.println(payload.ms);
   }
 }
 
