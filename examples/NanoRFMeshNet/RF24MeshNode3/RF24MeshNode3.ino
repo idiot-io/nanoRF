@@ -27,7 +27,7 @@ RF24Mesh mesh(radio, network);
 
  **/
 #define nodeID 3 
-#define otherNodeID 2 
+#define otherNodeID 1 
 
 uint32_t millisTimer = 0;
 
